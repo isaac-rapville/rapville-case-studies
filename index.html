@@ -42,6 +42,9 @@ button{font:inherit;color:inherit}
 .mark b{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.06em;line-height:1}
 .mark span{color:var(--muted);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
 .platforms{color:var(--faint);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.nav{display:flex;gap:8px}
+.nav a{height:36px;padding:0 14px;border:1px solid var(--line);border-radius:999px;display:inline-flex;align-items:center;font-size:13.5px;text-decoration:none;background:var(--bg-2)}
+.nav a[aria-current="page"]{background:var(--text);color:var(--bg);border-color:var(--text)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,8vw,112px);line-height:.92;letter-spacing:.005em;margin:0;text-transform:uppercase;max-width:13ch;text-wrap:balance}
 h1 em{font-style:normal;color:var(--acc)}
 .lede{color:var(--muted);max-width:58ch;margin:0;font-size:17px}
@@ -225,7 +228,7 @@ footer .wrap{padding-block:22px 34px;color:var(--faint);font-size:13px;display:f
   <div class="wrap">
     <div class="brandrow">
       <div class="mark"><b>RAPVILLE</b><span>Case Studies</span></div>
-      <div class="platforms">Instagram · TikTok · Spotify</div>
+      <nav class="nav" aria-label="Pages"><a href="index.html" aria-current="page">Case studies</a><a href="team.html">Team</a></nav>
     </div>
     <h1>Any genre. Any size. <em>Same formula.</em></h1>
     <p class="lede">Real artists, real numbers. Filter by genre, region, where the artist started and the result you care about, then open any artist for the full story and the actual videos.</p>
