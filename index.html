@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Rapville Case Studies</title>
+<meta name="description" content="Rapville client results: followers, monthly listeners, views and career wins across every genre and size.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Editorial, photo-first. Black stage, white type, one restrained accent. Single dark look by choice to match the Rapville deck. */
+:root{
+  --bg:#0A0A0B; --bg-2:#121214; --bg-3:#18181B; --bg-4:#222226;
+  --line:#2A2A2F; --line-2:#3A3A40;
+  --text:#F5F5F4; --muted:#A1A1AA; --faint:#6B6B73;
+  --acc:#A78BFA; --acc-deep:#6D28D9;
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --body:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+  --r:16px;
+  --gut-l:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.55;margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Hero */
+.hero{border-bottom:1px solid var(--line)}
+.hero .wrap{padding-block:26px 34px;display:grid;gap:28px}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:12px}
+.mark b{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.06em;line-height:1}
+.mark span{color:var(--muted);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.platforms{color:var(--faint);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,8vw,112px);line-height:.92;letter-spacing:.005em;margin:0;text-transform:uppercase;max-width:13ch;text-wrap:balance}
+h1 em{font-style:normal;color:var(--acc)}
+.lede{color:var(--muted);max-width:58ch;margin:0;font-size:17px}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.proof button{all:unset;cursor:pointer;display:grid;gap:6px;padding:20px 22px;background:var(--bg);transition:background .2s}
+.proof button:hover{background:var(--bg-3)}
+.proof button:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+.proof .n{font-family:var(--display);font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:.01em}
+.proof .l{font-size:14px;color:var(--text)}
+.proof .w{font-size:11px;color:var(--acc);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+
+/* Sticky controls */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(10,10,11,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{padding-block:12px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.row1{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{flex:1 1 240px;min-width:0;position:relative}
+.search input{width:100%;height:42px;border-radius:999px;border:1px solid var(--line);background:var(--bg-2);color:var(--text);padding:0 16px 0 40px;font:inherit;font-size:15px}
+.search input::placeholder{color:var(--faint)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none}
+.quick{display:flex;gap:8px;flex-wrap:wrap}
+.qbtn,.gbtn,.chip{border:1px solid var(--line);background:var(--bg-2);border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.qbtn{height:42px;padding:0 15px;font-size:14px;font-weight:500}
+.qbtn[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.row2{display:flex;gap:8px;align-items:center;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding-inline:4px}
+.row2::-webkit-scrollbar{display:none}
+.gbtn{height:36px;padding:0 13px;font-size:13.5px;display:inline-flex;align-items:center;gap:6px;flex:none}
+.gbtn .c{font-size:11px;font-weight:700;background:var(--acc-deep);border-radius:999px;min-width:18px;height:18px;display:inline-grid;place-items:center;padding:0 5px}
+.gbtn svg{width:10px;height:10px;stroke:currentColor;fill:none;transition:transform .2s}
+.gbtn[aria-expanded="true"]{border-color:var(--line-2);background:var(--bg-4)}
+.gbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.count{margin-left:auto;flex:none;color:var(--muted);font-size:13px;padding-left:8px}
+.count b{color:var(--text)}
+.clear{flex:none;background:none;border:0;color:var(--acc);font-size:13px;cursor:pointer;padding:6px 4px;text-decoration:underline;text-underline-offset:3px}
+.panel{display:flex;flex-wrap:wrap;gap:8px;padding-top:2px}
+.panel .plabel{width:100%;font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.chip{height:34px;padding:0 13px;font-size:13.5px;display:inline-flex;align-items:center;gap:7px}
+.chip .k{color:var(--faint);font-size:12px}
+.chip[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.chip[aria-pressed="true"] .k{color:#52525B}
+.qbtn:hover,.gbtn:hover,.chip:hover{border-color:var(--line-2)}
+
+/* Sections */
+main{padding-block:30px 48px}
+main > section + section{margin-top:56px}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sec-h h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,40px);letter-spacing:.01em;line-height:1;margin:0;text-transform:uppercase}
+.sec-h p{margin:0;color:var(--muted);font-size:14px;max-width:60ch}
+
+/* Grid and tiles */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;border-radius:var(--r);background:var(--bg-2);border:1px solid var(--line);overflow:hidden;min-width:0;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--line-2)}
+.card:hover .ph img{transform:scale(1.04)}
+.card:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.card.anim{animation:rise .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:.3;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.ph .poster{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden}
+.ph .poster b{font-family:var(--display);font-weight:400;font-size:clamp(120px,22vw,220px);line-height:.8;color:rgba(255,255,255,.07);letter-spacing:-.02em;transform:translateY(-6%)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 72%,rgba(0,0,0,.92) 100%);pointer-events:none}
+.ph .cap{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:16px 18px;display:grid;gap:8px}
+.ph .nm{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.4vw,34px);line-height:.98;text-transform:uppercase;letter-spacing:.01em;overflow-wrap:anywhere;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.rank{position:absolute;top:12px;left:12px;z-index:1;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(10,10,11,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:6px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.12)}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11px;line-height:1;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.12);color:#E4E4E7;white-space:nowrap;backdrop-filter:blur(4px)}
+.body{padding:16px 18px 18px;display:grid;gap:10px;flex:1;align-content:start}
+.stat .v{font-family:var(--display);font-weight:400;font-size:34px;line-height:1;letter-spacing:.01em;overflow-wrap:anywhere}
+.stat .v.soft{font-family:var(--body);font-weight:600;font-size:17px;color:var(--acc);letter-spacing:0;line-height:1.3}
+.stat .l{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.hook{font-size:14.5px;line-height:1.45;color:#D4D4D8;margin:0}
+
+/* Flagship tiles: photo fills the whole card, stats sit on the image */
+.card.feat .ph{aspect-ratio:auto;flex:1;min-height:440px}
+.card.feat .ph::after{background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.6) 60%,rgba(0,0,0,.95) 100%)}
+.card.feat .ph .nm{font-size:clamp(40px,4.4vw,64px)}
+.card.feat .fstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid rgba(255,255,255,.18);padding-top:12px;margin-top:4px}
+.card.feat .fstats .v{font-family:var(--display);font-size:clamp(24px,2.4vw,34px);line-height:1;display:block}
+.card.feat .fstats .l{font-size:12.5px;color:#D4D4D8;display:block;margin-top:4px;line-height:1.35}
+.card.feat .hook{color:#E4E4E7;font-size:15px}
+
+.empty{padding:60px 0;text-align:center;color:var(--muted);display:grid;gap:14px;justify-items:center}
+.empty strong{font-family:var(--display);font-weight:400;font-size:28px;color:var(--text);text-transform:uppercase}
+.empty button{border:1px solid var(--line-2);background:none;border-radius:999px;padding:10px 18px;cursor:pointer}
+
+/* Drawer */
+.scrim{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;transition:opacity .25s}
+.scrim.on{opacity:1}
+.drawer{position:fixed;z-index:60;top:0;right:0;bottom:0;width:min(580px,100%);background:var(--bg-2);border-left:1px solid var(--line);display:flex;flex-direction:column;
+  transform:translateX(102%);transition:transform .34s cubic-bezier(.2,.75,.2,1);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer.on{transform:none}
+.dh{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));left:12px;right:12px;z-index:3;display:flex;justify-content:space-between;gap:8px;pointer-events:none}
+.dh > *{pointer-events:auto}
+.ibtn{height:36px;min-width:36px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(10,10,11,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px}
+.ibtn:hover{border-color:rgba(255,255,255,.4)}
+.ibtn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+.db{overflow-y:auto;overscroll-behavior:contain;display:grid;align-content:start}
+.dhero{position:relative;aspect-ratio:4/3;background:#000;overflow:hidden}
+.dhero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dhero .poster{position:absolute;inset:0;display:grid;place-items:center}
+.dhero .poster b{font-family:var(--display);font-weight:400;font-size:260px;line-height:.8;color:rgba(255,255,255,.07)}
+.dhero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.4) 65%,var(--bg-2) 100%)}
+.dhero .cap{position:absolute;left:22px;right:22px;bottom:16px;z-index:1;display:grid;gap:10px}
+.dtitle{font-family:var(--display);font-weight:400;font-size:clamp(40px,8vw,60px);line-height:.95;margin:0;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+.eb{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.dcontent{padding:8px 22px 32px;display:grid;gap:24px}
+.dhook{font-size:19px;line-height:1.4;margin:0}
+.sgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sbox{background:var(--bg-2);padding:15px 16px;display:grid;gap:5px;align-content:start;min-width:0}
+.sbox .v{font-family:var(--display);font-weight:400;font-size:28px;line-height:1;overflow-wrap:anywhere}
+.sbox .v.soft{font-family:var(--body);font-weight:600;font-size:18px;color:var(--acc)}
+.sbox .l{font-size:13.5px;color:var(--muted)}
+.sbox.wide{grid-column:1/-1}
+.story{display:grid;gap:16px}
+.beat{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.beat h3{margin:3px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.beat p{margin:0;max-width:62ch;color:#E4E4E7}
+.note{font-size:14px;color:var(--muted);border-left:2px solid var(--acc-deep);padding-left:12px;margin:0}
+.links{display:grid;gap:8px}
+.links h3,.meta h3{margin:0 0 2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.lnk{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--bg-3);border:1px solid var(--line);text-decoration:none;transition:border-color .15s,background .15s;min-width:0}
+.lnk:hover{border-color:var(--line-2);background:var(--bg-4)}
+.lnk .pf{flex:none;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:10.5px;font-weight:700;background:var(--bg-4)}
+.lnk .pf.ig{background:linear-gradient(135deg,#7B2FF7,#E1306C)}
+.lnk .pf.tt{background:#000;box-shadow:inset 0 0 0 1px #3a3a3a}
+.lnk .pf.sp{background:#1DB954;color:#04170B}
+.lnk .pf.fb{background:#1877F2}
+.lnk .pf.fr{background:#5B53FF}
+.lnk .pf.yt{background:#E62117}
+.lnk .t{min-width:0;flex:1;font-size:15px;line-height:1.3}
+.lnk .t small{display:block;color:var(--faint);font-size:12px}
+.lnk .go{flex:none;width:14px;height:14px;stroke:var(--muted);fill:none;stroke-width:2}
+.meta{display:grid;gap:6px;font-size:13.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:80;background:var(--text);color:var(--bg);font-weight:600;font-size:14px;padding:10px 16px;border-radius:999px;transition:opacity .2s,transform .2s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:22px 34px;color:var(--faint);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+@media (max-width:860px){
+  .proof{grid-template-columns:minmax(0,1fr)}
+  .proof button{grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:center;padding:14px 16px}
+  .proof .n{grid-row:span 2;font-size:32px;min-width:120px}
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+  .card.feat .ph{min-height:520px}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .hero .wrap{padding-block:18px 24px;gap:20px}
+  .lede{font-size:15.5px}
+  .search{flex-basis:100%}
+  .quick{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .quick::-webkit-scrollbar{display:none}
+  .qbtn{height:38px;padding:0 13px;font-size:13.5px;flex:none}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card.feat .ph{min-height:480px}
+  .card.feat .fstats{gap:10px}
+  .ph .cap{padding:12px}
+  .ph .nm{font-size:22px}
+  .body{padding:12px;gap:8px}
+  .stat .v{font-size:26px}
+  .hook{font-size:13.5px}
+  .rank{top:8px;left:8px;font-size:10px;padding:5px 7px}
+  .ph .tags{display:none}
+  .card.feat .ph .tags{display:flex}
+  .drawer{top:auto;height:94%;width:100%;border-left:0;border-top:1px solid var(--line);border-radius:20px 20px 0 0;overflow:hidden;transform:translateY(102%);padding-left:env(safe-area-inset-left,0px)}
+  .dcontent{padding:6px 18px 28px}
+  .beat{grid-template-columns:minmax(0,1fr);gap:4px}
+  .sbox .v{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow">
+      <div class="mark"><b>RAPVILLE</b><span>Case Studies</span></div>
+      <div class="platforms">Instagram · TikTok · Spotify</div>
+    </div>
+    <h1>Any genre. Any size. <em>Same formula.</em></h1>
+    <p class="lede">Real artists, real numbers. Filter by genre, region, where the artist started and the result you care about, then open any artist for the full story and the actual videos.</p>
+  </div>
+</header>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="row1">
+      <label class="search" for="q">
+        <svg viewBox="0 0 24 24" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="Search artist, genre, country, result" autocomplete="off" aria-label="Search case studies">
+      </label>
+      <div class="quick" role="group" aria-label="Quick filters">
+        <button class="qbtn" id="qb-small" type="button" aria-pressed="false">Started under 10K</button>
+        <button class="qbtn" id="qb-money" type="button" aria-pressed="false">Money and career</button>
+        <button class="qbtn" id="qb-big" type="button" aria-pressed="false">Big names</button>
+      </div>
+    </div>
+    <div class="row2" id="groups" role="group" aria-label="Filter groups"></div>
+    <div class="panel" id="panel" hidden></div>
+  </div>
+</div>
+
+<main>
+  <section class="wrap" id="sec-big">
+    <div class="sec-h"><h2>Who we work with</h2><p>Major artists who trust us with their content.</p></div>
+    <div class="grid" id="grid-big" aria-live="polite"></div>
+  </section>
+  <section class="wrap" id="sec-results">
+    <div class="sec-h"><h2>Case studies</h2><p>Artists we grew, ranked by where they are now.</p></div>
+    <div class="fgrid" id="grid-feat"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </section>
+  <div class="wrap">
+    <div class="empty" id="empty" hidden>
+      <strong>No case studies match that mix.</strong>
+      <span>Try fewer filters. Every genre and size is covered somewhere.</span>
+      <button type="button" id="empty-clear">Clear all filters</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Figures from Rapville client reporting, Instagram insights and Spotify for Artists, 2025-2026. Monthly listeners as of November 2026.</span>
+    <span>Rapville</span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden>
+  <div class="dh">
+    <button class="ibtn" id="d-copy" type="button" aria-label="Copy link to this artist">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"></path><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"></path></svg>Copy link
+    </button>
+    <button class="ibtn" id="d-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+    </button>
+  </div>
+  <div class="db" id="d-body"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ---------- PHOTOS ----------
+   One photo per artist, served from images/<id>.jpg next to this page.
+   Add an id here once its photo is published. pos = focal point (CSS object-position). */
+const PHOTOS = {
+  demxntia:{src:"images/demxntia.jpg", pos:"40% 45%"},
+  citizen:{src:"images/citizen.jpg", pos:"50% 40%"},
+  khoslaraghu:{src:"images/khoslaraghu.jpg", pos:"50% 35%"},
+  adri:{src:"images/adri.jpg", pos:"40% 45%"},
+  "rb-singh":{src:"images/rb-singh.jpg", pos:"50% 30%"},
+  jayo:{src:"images/jayo.jpg", pos:"50% 35%"},
+  "la-gigi":{src:"images/la-gigi.jpg", pos:"50% 40%"},
+  kamille:{src:"images/kamille.jpg", pos:"50% 40%"},
+  lavez:{src:"images/lavez.jpg", pos:"50% 40%"},
+  "arjuna-harjai":{src:"images/arjuna-harjai.jpg", pos:"50% 30%"},
+  "justin-jesso":{src:"images/justin-jesso.jpg", pos:"48% 40%"},
+  "david-lohlein":{src:"images/david-lohlein.jpg", pos:"50% 30%"},
+  decarlo:{src:"images/decarlo.jpg", pos:"45% 40%"},
+  desiree:{src:"images/desiree.jpg", pos:"52% 30%"},
+  "donna-dafi":{src:"images/donna-dafi.jpg", pos:"42% 30%"},
+  "paul-brady":{src:"images/paul-brady.jpg", pos:"52% 35%"},
+  "april-kae":{src:"images/april-kae.jpg", pos:"45% 35%"},
+  "sara-dastjani":{src:"images/sara-dastjani.jpg", pos:"50% 30%"},
+  "bianca-taylor":{src:"images/bianca-taylor.jpg", pos:"45% 40%"},
+  "lorenz-simonetti":{src:"images/lorenz-simonetti.jpg", pos:"40% 35%"},
+  "aiden-laurent":{src:"images/aiden-laurent.jpg", pos:"55% 40%"},
+  "dj-miah":{src:"images/dj-miah.jpg", pos:"50% 35%"},
+  laura:{src:"images/laura.jpg", pos:"35% 30%"},
+  "richie-cypunk":{src:"images/richie-cypunk.jpg", pos:"50% 50%"},
+  petra:{src:"images/petra.jpg", pos:"45% 30%"},
+  "michael-bibi":{src:"images/michael-bibi.jpg", pos:"50% 50%"},
+  russ:{src:"images/russ.jpg", pos:"45% 35%"},
+  "jason-derulo":{src:"images/jason-derulo.jpg", pos:"45% 40%"},
+  "g-eazy":{src:"images/g-eazy.jpg", pos:"45% 40%"},
+  "eric-bellinger":{src:"images/eric-bellinger.jpg", pos:"40% 45%"},
+  arrdee:{src:"images/arrdee.jpg", pos:"48% 35%"},
+  "fetty-wap":{src:"images/fetty-wap.jpg", pos:"55% 30%"},
+  "d-smoke":{src:"images/d-smoke.jpg", pos:"50% 40%"},
+  slaw:{src:"images/slaw.jpg", pos:"45% 40%"},
+};
+
+/* ---------- DATA (Rapville sources; monthly listeners checked by Isaac on Spotify, Nov 2026) ---------- */
+const GLOW = {
+  "Hip-hop / Rap":"#6D28D9","R&B":"#B7791F","Pop":"#DB2777","Rock / Indie":"#B91C1C","Latin":"#EA580C","Afrobeats":"#16A34A","Funk":"#CA8A04",
+  "South Asian":"#D97706","Electronic / DJ":"#0D9488","_":"#4C1D95"
+};
+
+/* Order in this array IS the ranking on the page. */
+const CASES = [
+{ id:"demxntia", name:"Demxntia", featured:true,
+  hook:"24K to 160K followers in one month. Now selling out tour dates.",
+  region:"Malaysia", regionNote:"Malaysian artist, pushed to a western audience",
+  stage:"Growing: 10K-100K", results:["Followers","Monthly listeners","Streams","Money and career"],
+  stats:[{v:"24K → 160K",l:"followers in one month"},{v:"600K",l:"Spotify monthly listeners now"},{v:"1,000",l:"tickets sold on his China tour"},{v:"200",l:"videos posted a month"},{v:"94%",l:"of views from people who didn't follow him yet"}],
+  before:"Stuck for months. Loyal fans, zero growth. His old strategy boxed him into one audience: he could only reach Malaysian listeners.",
+  did:"We pushed his music to a western and North American audience and flooded the feed: 200 videos a month across Instagram and TikTok. 94% of the views came from people who did not follow him yet.",
+  result:"24K to 160K followers in one month. 500K streams in the first month alone, and he now sits at 600K monthly listeners on Spotify. He sold 1,000 tickets on his China tour.",
+  meta:"Independent artist. Joined August 2026.",
+  links:[{l:"Watch the reel behind the breakout",u:"https://www.instagram.com/reel/DeSJg4Mkg42/"}] },
+
+{ id:"citizen", name:"Citizen", featured:true,
+  hook:"Zero to 1M followers in 12 months. The pioneer of the transition format.",
+  genre:"Hip-hop / Rap", region:"Los Angeles", regionNote:"Shot by our LA team",
+  stage:"Starting out: under 10K", results:["Followers","Streams","Views"],
+  stats:[{v:"0 → 1M",l:"followers in 12 months"},{v:"52M+",l:"streams from content alone, no ads"},{v:"$50K-150K",l:"estimated earnings a month"},{v:"150M",l:"views on one video"},{v:"26,000",l:"reels made by fans using the song"},{v:"20M",l:"views on a rap song that started the boomerang trend"}],
+  before:"Started from zero.",
+  did:"Scotty, part of our LA production team, shot all of his videos and runs creative direction, filming, editing and strategy end to end. The 150M video used the viral strategy we call the Snapchat method.",
+  result:"Zero to 1 million followers in 12 months and 52M+ streams from content alone, with no ad spend. One video did 150M views on Instagram and kicked off a trend of 26,000 reels using the song.",
+  links:[{l:"Instagram profile",u:"https://www.instagram.com/citizen_theartist/?hl=en"}] },
+
+{ id:"khoslaraghu", name:"KhoslaRaghu", featured:true,
+  hook:"Same music, new packaging. Now close to a million monthly listeners.",
+  genre:"Indian / Bollywood", region:"India", regionNote:"Indian duo",
+  stage:"Scaling: 100K+", results:["Monthly listeners","Followers","Views","Streams"],
+  stats:[{v:"964K",l:"Spotify monthly listeners"},{v:"105K → 167K",l:"Instagram followers since joining"},{v:"60M",l:"views in the first two months"},{v:"2.86M",l:"streams on 'Mile Jo Sukoon', growing 70K a day"},{v:"14.2M",l:"views on one trial reel: 187K likes, 18.5K shares"},{v:"~10M",l:"views across their first 3 posts, up from 20K-100K a post"}],
+  before:"105K followers, with posts landing between 20K and 100K views each.",
+  did:"We kept the same songs and repackaged them with our content formats.",
+  result:"Nearly 10M views across the first three posts and 60M in the first two months. Comment sections full of fans: buzz, not just views. 'Mile Jo Sukoon' passed 2.86M streams. Followers went from 105K to 167K, and they are now at 964K monthly listeners.",
+  links:[{l:"See the reels on their profile",u:"https://www.instagram.com/khoslaraghumusic/reels/?hl=en"},{l:"Watch a featured reel",u:"https://www.instagram.com/reel/DdL8xsSNk8l/?hl=en"}] },
+
+{ id:"adri", name:"Adri", aka:"Adriano", regionNote:"Italian artist", featured:true,
+  hook:"500 monthly listeners to 100K+. Now doing music full time.",
+  stage:"Starting out: under 10K", results:["Monthly listeners","Views","Streams","Money and career"],
+  stats:[{v:"500 → 100K+",l:"monthly listeners"},{v:"1M",l:"views in his first week on the strategy"},{v:"1M+",l:"streams on his recent EP"}],
+  before:"500 monthly listeners.",
+  did:"He used the strategy, got 1M views in the first week, then kept repeating what worked.",
+  result:"His recent EP is past 1M streams and we have generated millions of streams together in the last year. He is selling beats, doing shows and doing music full time.",
+  links:[{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7491375701459848470"},{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7525538606698499350"},{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7555088865011223830"},{l:"Viral Instagram reel",u:"https://www.instagram.com/reel/DOwS9SkDa_X/?hl=en"},{l:"Spotify",u:"https://open.spotify.com/artist/6y985VEM5UDacD7lG3Zq9C"}] },
+
+{ id:"rb-singh", name:"RB Singh", aka:"Robin Brar", regionNote:"Punjabi artist based in Oslo, Norway",
+  hook:"Stopped paying for ads. Monthly listeners 30K to 130K.",
+  genre:"Indian / Bollywood", stage:"Growing: 10K-100K", results:["Monthly listeners","Views","Streams"],
+  stats:[{v:"30K → 130K",l:"monthly listeners"},{v:"700K",l:"views and 62K likes on one reel"},{v:"130K",l:"views and 6,500 likes on another"}],
+  before:"A Punjabi artist spending around $3,000 a month on paid ads. The ads made views, but the traffic was poorly targeted and did not turn into listeners.",
+  did:"He went all in on organic. We tested a series of structured viral concepts, then doubled down on what performed best.",
+  result:"Monthly listeners went from 30K to 130K. Millions of views and hundreds of thousands of streams in the first 60 days, without more ad spend.",
+  links:[{l:"Watch the 700K reel",u:"https://www.instagram.com/reel/DTQRH7ZjB1G/"},{l:"Instagram profile",u:"https://www.instagram.com/rb_singhofficial/"},{l:"Spotify",u:"https://open.spotify.com/artist/2Xai801c9jaVjHzViq0F71"}] },
+
+{ id:"jayo", name:"Jayo",
+  hook:"700K monthly listeners. His editor is our editor.",
+  results:["Monthly listeners","Views","Streams"],
+  stats:[{v:"700K",l:"Spotify monthly listeners"},{v:"15.6M",l:"views on one video"},{v:"15M",l:"streams on 'Worst Case Scenario'"},{v:"1.1M",l:"views on another"}],
+  did:"One of our most successful social media artists. His editor is our editor, and we bring the same quality to every client.",
+  links:[{l:"Watch the reel",u:"https://www.instagram.com/reel/DYnpibgTo5x/"},{l:"Reels page",u:"https://www.instagram.com/jayo/reels/"}] },
+
+{ id:"la-gigi", name:"La Gigi",
+  hook:"One tweak away from blowing up. Now half a million monthly listeners.",
+  results:["Monthly listeners","Views"],
+  stats:[{v:"500K",l:"Spotify monthly listeners"},{v:"1M · 5.5M · 6M",l:"views on her first three videos with us"},{v:"200K",l:"her average views before"}],
+  before:"Already had some algorithm pull, averaging about 200K views.",
+  did:"We came in and changed the content straight away.",
+  result:"1M views on the first video with us, 5.5M on the second, 6M on the third.",
+  links:[{l:"Watch the 6M reel",u:"https://www.instagram.com/reel/DWpzSZ-DbF2/"},{l:"Watch the 5.5M reel",u:"https://www.instagram.com/reel/DWktVBNjSeU/"},{l:"Watch the 1M first video",u:"https://www.instagram.com/reel/DWaO_h_DX2D/"},{l:"Instagram profile",u:"https://www.instagram.com/lagigird/"}] },
+
+{ id:"kamille", name:"Kamille",
+  hook:"Alt-pop with a run of viral TikToks. Half a million monthly listeners.",
+  genre:"Pop", results:["Monthly listeners","Views","Followers"],
+  stats:[{v:"500K",l:"Spotify monthly listeners"},{v:"404K",l:"Instagram followers"},{v:"612K",l:"views on one video"}],
+  links:[{l:"Viral TikTok",u:"https://www.tiktok.com/@kamilleofficial/video/7571171931769097494"},{l:"Viral TikTok",u:"https://www.tiktok.com/@kamilleofficial/video/7568841216696110358"},{l:"Viral TikTok",u:"https://www.tiktok.com/@kamilleofficial/video/7568510473000209686"}] },
+
+{ id:"lavez", name:"Lavez",
+  hook:"Micro-niche targeting for Australian car culture.",
+  region:"Australia", regionNote:"Content built for Australia's car scene",
+  results:["Monthly listeners","Streams","Views"],
+  stats:[{v:"84K",l:"Spotify monthly listeners"},{v:"150K+",l:"streams on 'Cop Car'"},{v:"100K+",l:"YouTube views"}],
+  did:"Visuals and on-screen text made for a cult car fanbase in Australia. Going viral was easier, and turning views into streams was easier, because we reached the right people.",
+  result:"150K streams and 100K YouTube views from going viral on TikTok and Instagram.",
+  links:[{l:"Viral reel",u:"https://www.instagram.com/p/DPnoEi0kreI/?hl=en"},{l:"Viral TikTok",u:"https://www.tiktok.com/@lavez27/video/7558365752231759122"},{l:"Spotify",u:"https://open.spotify.com/artist/34XFmmLOHraER0bnb7APK2"},{l:"YouTube video",u:"https://youtu.be/P0pJzirXsC4"}] },
+
+{ id:"arjuna-harjai", name:"Arjuna Harjai",
+  hook:"2M followers, 5K views. Switched back on.",
+  genre:"Indian / Bollywood", region:"UK", regionNote:"Filmed in everyday UK locations",
+  stage:"Scaling: 100K+", results:["Views","Streams"],
+  stats:[{v:"4.8M",l:"views on the first post, 960x his average"},{v:"137K",l:"streams in a month, growing 2K+ a day"},{v:"1.1M",l:"views on the tequila slap hook"},{v:"768K",l:"views on the breakup song hook"}],
+  before:"2M followers, but averaging 5K views. He came up when followers watched everything. Now every post starts from zero, and he never adapted.",
+  did:"'Chitty' is a love song, the most crowded lane in music, so it needed an angle nobody else had: his wife. We swapped lo-fi phone videos for cinematic storylines with her as the love interest. Everyday UK locations, a red shirt in every video, Bollywood touches for his Indian audience worldwide. Then world building: same emotions, same characters, same look, so people recognise him and come back.",
+  result:"The first post did 4.8M views. 137K streams in a month and growing 2K+ a day, two months in. We filmed all of it.",
+  links:[{l:"Watch the 4.8M first post",u:"https://www.facebook.com/reel/1468360921711084?locale=en_GB"},{l:"Tequila slap hook, 1.1M",u:"https://www.instagram.com/reel/DY4VWwFAqf1/?hl=en"},{l:"Breakup song hook, 768K",u:"https://www.instagram.com/reel/DY6pQ3AgS0B/?hl=en"},{l:"TV transition, 338K",u:"https://www.instagram.com/reel/DZHrVeQguaX/?hl=en"},{l:"Spotify",u:"https://open.spotify.com/artist/6EwLfbS1MI8kZXTIwkGfHN"}] },
+
+{ id:"justin-jesso", name:"Justin Jesso",
+  hook:"17M views in 72 hours.",
+  region:"Los Angeles", regionNote:"Cracked by our LA team",
+  results:["Views"],
+  stats:[{v:"17M",l:"views in 72 hours"}],
+  before:"Ideas were strong, consistency was locked in and operations were smooth, but early posts did not break through.",
+  did:"We kept testing instead of stopping. Gary on our LA team cracked the execution.",
+  result:"17M views in 72 hours.",
+  links:[{l:"Watch the 17M reel",u:"https://www.facebook.com/reel/1659039022492405"}] },
+
+{ id:"david-lohlein", name:"David Löhlein",
+  hook:"500K views and on track for 100K followers after 2 weeks.",
+  results:["Views","Followers"],
+  stats:[{v:"500K",l:"views"},{v:"100K",l:"followers on track, after 2 weeks"}],
+  result:"500K views and on track for 100K followers two weeks in.",
+  links:[] },
+
+{ id:"decarlo", name:"DeCarlo",
+  hook:"Hit songwriter for global stars, launching his own artist brand.",
+  results:["Views"],
+  stats:[{v:"4M",l:"views in his first week of posting"},{v:"1.9M",l:"views on one week-one video"},{v:"25K",l:"average views before"}],
+  before:"A hit songwriter for global stars, averaging around 25K views a video.",
+  did:"Full creative direction, filming and editing, across several viral formats: BTS vs the shot, the clone effect and the zoom hook. No ads.",
+  result:"Multiple 1M+ videos in the first 7 days and 4M views in the first week.",
+  links:[{l:"BTS vs the shot",u:"https://www.instagram.com/reel/DP1iaP8kc24/?hl=en"},{l:"Zoom hook",u:"https://www.instagram.com/reel/DQXLBnQAZHP/"},{l:"Clone effect",u:"https://www.instagram.com/reels/DRk6sW1CGUk/"}] },
+
+{ id:"desiree", name:"Desiree", regionNote:"US artist",
+  hook:"4M+ views in her first month. 10K streams overnight.",
+  results:["Views","Streams"],
+  stats:[{v:"4M+",l:"views in her first month"},{v:"3.4M",l:"views on the first post with the new song"},{v:"10K",l:"streams overnight from one video"}],
+  did:"Song testing. We posted the whole month with one song, then switched.",
+  result:"The first post with the new song did 3.4M views and 10K streams overnight.",
+  links:[{l:"Watch the 3.4M reel",u:"https://www.instagram.com/p/DQsXzr3kj0H/?hl=en"},{l:"Viral reel",u:"https://www.instagram.com/p/DPhNwaoEhIT/"},{l:"Spotify track",u:"https://open.spotify.com/track/0zsJj70ovGKLeEvVarKrW9"}] },
+
+{ id:"donna-dafi", name:"Donna Dafi",
+  hook:"World building with tasteful, cinematic content.",
+  results:["Followers"],
+  stats:[{v:"207K",l:"Instagram followers"},{v:"35K",l:"Spotify monthly listeners"}],
+  did:"She is not chasing virality right now. We are building her world with cinematic content, with viral-ready videos in the bank.",
+  links:[{l:"Watch a reel",u:"https://www.instagram.com/reel/DXfYLzCjD5L/"},{l:"Watch a reel",u:"https://www.instagram.com/reel/DX7RJS2sXBa/"},{l:"Watch a reel",u:"https://www.instagram.com/reel/DXj_A91DDfS/"}] },
+
+{ id:"paul-brady", name:"Paul Brady",
+  hook:"Irish rapper. Content turned around by testing.",
+  genre:"Hip-hop / Rap", region:"Ireland", regionNote:"Irish rapper, filmed in a small town in Ireland",
+  results:["Views"],
+  stats:[{v:"1.2M",l:"views on the water-spray silhouette BTS"},{v:"350K",l:"views on the Guinness pour hook"},{v:"160K",l:"views on the slow-motion hook"}],
+  before:"One-dimensional videos: phone on a stand, a freestyle, post.",
+  did:"Visuals that matched his lyrics, tested one hook at a time. The movement hook was the first sign of life at 30K, then the Snapchat hook, then a 1.2M breakthrough. We doubled down with variations and filmed all of it on location in Ireland.",
+  result:"A 1.2M-view breakthrough, then variations at 350K, 160K and 99K.",
+  links:[{l:"Watch the 1.2M breakthrough",u:"https://www.tiktok.com/@paulbrady773/video/7672805764406299937"},{l:"Guinness pour hook, 350K",u:"https://www.tiktok.com/@paulbrady773/video/7668723998011837728"},{l:"Slow-motion hook, 160K",u:"https://www.tiktok.com/@paulbrady773/video/7667981666798832929"},{l:"Library freestyle, 99K",u:"https://www.tiktok.com/@paulbrady773/video/7678025291310173473"}] },
+
+{ id:"slaw", name:"Slaw",
+  hook:"Our first ever success story.",
+  results:["Streams"],
+  stats:[{v:"2M",l:"streams"},{v:"#1",l:"trending sound in Asia at the time"}],
+  did:"We sampled the trending sound 'stay high'.",
+  result:"2M streams and the number one trending sound in Asia at the time.",
+  links:[{l:"Spotify",u:"https://open.spotify.com/artist/2sSSUkxsv3jAVD3mPL9Rp0"}] },
+
+{ id:"april-kae", name:"April Kae",
+  hook:"Female rock artist. Millions of views with our strategy.",
+  genre:"Rock", results:["Views","Followers"],
+  stats:[{v:"910K",l:"Instagram followers"}],
+  links:[{l:"Watch a reel",u:"https://www.instagram.com/reel/DX-MTX_yxhs/"},{l:"Watch a reel",u:"https://www.instagram.com/reel/DWaHQ6YD-lM/"},{l:"Watch a reel",u:"https://www.instagram.com/reel/DLGFb8YBq46/"}] },
+
+{ id:"sara-dastjani", name:"Sara Dastjani",
+  hook:"Millions of views across TikTok and Instagram.",
+  results:["Views","Followers"],
+  stats:[{v:"707K",l:"Instagram followers"}],
+  did:"Strategy and execution on high-quality reels that scaled her following.",
+  result:"Millions of views across TikTok and Instagram. She has since moved to more personality-led content to connect with the fans she built.",
+  links:[{l:"Watch a reel",u:"https://www.instagram.com/p/DMLirQuMzF0/"},{l:"Watch a reel",u:"https://www.instagram.com/reel/DJe6-hhSCKd/"}] },
+
+{ id:"bianca-taylor", name:"Bianca Taylor",
+  hook:"Debut single, no music audience. 21M views in 30 days.",
+  genre:"Pop", region:"Los Angeles", regionNote:"Half the month shot in LA",
+  small:true, smallNote:"Had never released music and had no music audience",
+  results:["Views"],
+  stats:[{v:"21M",l:"views from her first 30 posts"},{v:"17.5M",l:"views on one TV-transition reel, 400x+ her baseline"},{v:"2.4M",l:"views on the spinning-chair transition"},{v:"20-40K",l:"her baseline views before, on fitness and lifestyle content"}],
+  before:"Never released music. No music audience, no label. She pulled 20-40K views on fitness, lifestyle and dance content, then dropped her debut single 'Renaissance' and her followers were confused. They did not know her as a singer.",
+  did:"The song is about rebirth and a new chapter, a summer pop record, so the content had to feel like that: sunny locations, loud colours, girl-boss energy, her dance background for real performance. We shot half the month in LA, waited for the data, then shot the rest. We binned what missed and spun the winners into new ideas.",
+  result:"21M views from her first 30 posts, 30 days into a brand-new music career. One TV transition did 17.5M.",
+  note:"A brand-new artist on a debut single. The point is how fast she got attention.",
+  links:[{l:"Watch the 17.5M reel",u:"https://www.instagram.com/reel/Da3El3fSOIi/?hl=en"},{l:"Watch the 2.4M spinning-chair reel",u:"https://www.instagram.com/reel/DbHmBHqB1LI/?hl=en"},{l:"TV transition, 2.2M",u:"https://www.facebook.com/reel/1048021641390426"},{l:"Pool party spin on a winner",u:"https://www.instagram.com/reel/DbbEsWpMp5w/?hl=en"}] },
+
+{ id:"lorenz-simonetti", name:"Lorenz Simonetti",
+  hook:"From influencer content to music that converts.",
+  results:["Views","Streams","Followers"],
+  stats:[{v:"143K",l:"Instagram followers"},{v:"400K+",l:"views on the DIY car-mount hook"},{v:"+1K/day",l:"streams after 2 weeks"}],
+  before:"Influencer-style content that was not selling his music.",
+  did:"New formats built around the song, plus a conversion step: a ManyChat automation where fans comment 'ARIA' to get the song link.",
+  result:"Going viral, and it converts. The song reached 1K streams a day after two weeks.",
+  links:[{l:"DIY car-mount hook, 400K+",u:"https://www.instagram.com/reel/DdyjXPWiqUe/"},{l:"Girlfriend reaction, 360K+",u:"https://www.instagram.com/reel/DdgjfSbCwOZ/"},{l:"Silhouette transition",u:"https://www.instagram.com/reel/DdtbzKsodNr/"},{l:"Spotify track",u:"https://open.spotify.com/track/788M6jSORLarVK2iJfiTaQ"}] },
+
+{ id:"aiden-laurent", name:"Aiden Laurent",
+  hook:"Korean pop-rock. Genre doesn't matter.",
+  genre:"Pop Rock", region:"South Korea", regionNote:"Pop rock artist from South Korea",
+  results:["Views"],
+  stats:[{v:"4.7M",l:"views on one video"},{v:"800K",l:"views on another"},{v:"175K",l:"views"}],
+  did:"The psychology of content does not change by genre: formats, storytelling, framing.",
+  result:"4.7M views on one video and 800K on another.",
+  links:[{l:"Watch the 4.7M reel",u:"https://www.instagram.com/reel/DatkjTiBvuO/?hl=en"},{l:"Watch the 800K reel",u:"https://www.instagram.com/reel/DaibP1HNkBT/?hl=en"},{l:"175K reel",u:"https://www.instagram.com/reel/Da1z8fKh-kn/?hl=en"}] },
+
+{ id:"dj-miah", name:"DJ Miah", regionNote:"London DJ",
+  hook:"Creative DJ strategies: flashmob content.",
+  genre:"DJ / Electronic", results:["Views"],
+  stats:[{v:"10.6M",l:"views on flashmob content"},{v:"70,000",l:"likes on posts"}],
+  links:[{l:"Flashmob post",u:"https://www.instagram.com/p/DFn99X6twQn/?hl=en"},{l:"Flashmob post",u:"https://www.instagram.com/p/DGQ1HonNbOL/?hl=en"},{l:"Instagram profile",u:"https://www.instagram.com/djmiahmusic/"}] },
+
+{ id:"richie-cypunk", name:"Richie (Cypunk)", regionNote:"Polish artist",
+  hook:"Zero followers to multiple viral videos in a month.",
+  stage:"Starting out: under 10K", results:["Views","Streams"],
+  stats:[{v:"2M+",l:"views on one video"},{v:"0",l:"followers a month earlier"},{v:"~30K",l:"streams on his song"}],
+  before:"Started from absolutely zero: no followers a month earlier.",
+  result:"Multiple viral videos, one past 2M views, and his song is nearly at 30K streams.",
+  links:[{l:"Watch the 2M+ video",u:"https://www.instagram.com/p/DUa2z49jWta/"},{l:"Instagram profile",u:"https://www.instagram.com/cypunk_city/"},{l:"Spotify track",u:"https://open.spotify.com/track/7zFZfWjs4VPv91a0j5l5i1"}] },
+
+{ id:"laura", name:"Laura",
+  hook:"One strategy. 130K views against her normal 300.",
+  small:true, smallNote:"Normal reach was around 300 views a video",
+  results:["Views"],
+  stats:[{v:"130,000",l:"views, against her normal 300"}],
+  did:"She followed a single strategy from our content plan.",
+  result:"That one video got 130K views.",
+  links:[{l:"Watch the video",u:"https://www.tiktok.com/@laurajadi/video/7512915131395738902"}] },
+
+{ id:"petra", name:"Petra",
+  hook:"Multi-million views on TikTok and Instagram.",
+  results:["Views"],
+  stats:[{v:"3.6M",l:"views on one TikTok"},{v:"1.4M",l:"views on another TikTok"},{v:"1.3M",l:"views on an Instagram reel"}],
+  result:"Six videos between 135K and 3.6M views across TikTok and Instagram.",
+  links:[{l:"Watch the 3.6M TikTok",u:"https://www.tiktok.com/@petra.ua/video/7618624783760018710"},{l:"1.4M TikTok",u:"https://www.tiktok.com/@petra.ua/video/7616028422581783810"},{l:"1.3M Instagram reel",u:"https://www.instagram.com/reel/DVwAD0FEQeN/"}] },
+
+/* ---------- WHO WE WORK WITH (ranked) ---------- */
+{ id:"michael-bibi", name:"Michael Bibi", big:true,
+  hook:"Release plus ticket launch: an 800-capacity venue sold out.",
+  genre:"DJ / Electronic", region:"Ibiza", regionNote:"Ibiza launch event",
+  results:["Followers","Streams","Views","Money and career"],
+  stats:[{v:"3,400",l:"videos made with the song in 48 hours"},{v:"800",l:"capacity venue, sold out"},{v:"2.9M",l:"Spotify streams on 'Sungazing'"},{v:"60K → 95K",l:"TikTok followers in 3 months"},{v:"$80,000",l:"raised by the launch, donated to charity"}],
+  before:"An engaged fan base that was not turning into viral moments.",
+  did:"A TikTok challenge around 'Sungazing' plus a trending-audio release strategy. Instead of waiting to win a free performance slot at the event, we launched ticket sales at the same time.",
+  result:"3,400 videos made with the song within 48 hours and a sold-out 800-capacity venue. The launch generated $80,000, which he donated to a local cancer research charity the next day. Nearly 3M streams and millions of views across TikTok and Reels.",
+  links:[] },
+
+{ id:"russ", name:"Russ", big:true,
+  hook:"We organised and filmed his London listening party.",
+  genre:"Hip-hop / Rap", region:"UK", regionNote:"London listening party, 10 Oct 2025",
+  results:[], stats:[], calibre:"The artists' artist",
+  did:"We helped organise and film his listening party in London on 10 October 2025.",
+  links:[{l:"Watch the listening party content",u:"https://next.frame.io/share/5994f15e-5766-489e-9417-babd426b8b05/049ab49f-985c-4b2a-9f3c-f756a46cac03"},{l:"Instagram reels",u:"https://www.instagram.com/russ/reels/?hl=en"},{l:"Spotify",u:"https://open.spotify.com/artist/1z7b1Pr1rSlvWRzsW3HOrS"}] },
+
+{ id:"jason-derulo", name:"Jason Derulo", big:true,
+  hook:"11M views on a single reel.",
+  genre:"R&B", results:["Views"],
+  stats:[{v:"11M",l:"views and 447K likes on one reel"},{v:"7.1M",l:"views and 127K likes on another"},{v:"400K",l:"views and 14K likes"}],
+  did:"Short-form reels for his main page.",
+  links:[{l:"Watch the 11M reel",u:"https://www.instagram.com/reel/DTqTiEPjLB-/"},{l:"Watch the 7.1M reel",u:"https://www.instagram.com/reel/DSa8Hs8kYy9/"},{l:"Watch the 400K reel",u:"https://www.instagram.com/reel/DT3AKzJjOnD/"},{l:"Reels page",u:"https://www.instagram.com/jasonderulo/reels/"}] },
+
+{ id:"g-eazy", name:"G-Eazy", big:true,
+  hook:"Viral formats, made tasteful.",
+  genre:"Hip-hop / Rap", results:[], stats:[], calibre:"Quality and calibre",
+  did:"Proof that 'that content is cringe' does not have to be true. We took a proven distraction-hook format and made it tasteful by visualising the lyrics of the song.",
+  links:[{l:"Watch the lyric-visual reel",u:"https://next.frame.io/share/0d80393b-9930-446f-b218-c9b2accb4136/view/c68f87f2-4c2c-4e1d-b686-9e6f3de41e10"},{l:"Watch the full set",u:"https://next.frame.io/share/0d80393b-9930-446f-b218-c9b2accb4136/182f8599-6900-41b9-99e7-94829a913ee6"}] },
+
+{ id:"eric-bellinger", name:"Eric Bellinger", big:true,
+  hook:"A dormant 1.1M following, reactivated. Our longest-standing client.",
+  genre:"R&B", stage:"Scaling: 100K+", results:["Views"],
+  stats:[{v:"24M",l:"views on the first video after relaunch"},{v:"$5M",l:"estimated earnings a year"},{v:"35M+",l:"views in the first month"},{v:"30K",l:"average views a post before"}],
+  before:"Over a million followers, but they had gone quiet. Videos averaged about 30K views a post.",
+  did:"A new creative strategy built to wake up his existing fans and reach new ones. We filmed it and posted.",
+  result:"Within days the first video passed 24M views, and the first month went past 35M. He is back with us now as our longest-standing client.",
+  links:[{l:"Watch the 24M reel",u:"https://www.instagram.com/reel/DOHUUlnEiJ7/"},{l:"First video of the new run",u:"https://www.instagram.com/reel/DWo23Uaj6Z5/"}] },
+
+{ id:"arrdee", name:"ArrDee", big:true,
+  hook:"We are ArrDee's content team.",
+  genre:"Hip-hop / Rap", region:"UK", regionNote:"UK rapper",
+  results:["Views"],
+  stats:[{v:"1.5M",l:"views on one comeback video"},{v:"$1M",l:"estimated earnings a year"},{v:"1M",l:"Instagram followers"}],
+  did:"Content for his comeback, filmed with the Rapville crew.",
+  result:"Multi-millions of views on the comeback, with 1.5M on one video.",
+  links:[{l:"Instagram profile",u:"https://www.instagram.com/arrdeegram/?hl=en"}] },
+
+{ id:"fetty-wap", name:"Fetty Wap", big:true,
+  hook:"Cinematic reels that carry the feeling of the song.",
+  genre:"Hip-hop / Rap", results:[], stats:[], calibre:"Quality and calibre",
+  before:"The 'Trap Queen' artist never had a strong social media presence. He gets views, but at random.",
+  did:"Engaging, cinematic reels that capture the feeling of the song and the level of quality his brand should show.",
+  links:[{l:"Watch the reels",u:"https://next.frame.io/share/3a45125c-487d-4149-bcf4-17f47c5dc7ac/"}] },
+
+{ id:"d-smoke", name:"D Smoke", big:true,
+  hook:"A rebrand built around who the song is for.",
+  genre:"Hip-hop / Rap", results:[], stats:[], calibre:"Quality and calibre",
+  did:"'Mujeres' means women in Spanish, so the videos feature women to reach the female audience, which is the more loyal one. Part of a wider rebrand.",
+  links:[{l:"Watch the reels",u:"https://next.frame.io/share/be791bda-951c-4078-b606-f914d599fde2/view/0a42bf08-1e07-4fd5-b862-95288c0c105e"}] }
+];
+
+/* ---------- FILTER TAGS (one source of truth for genre, region, starting stage, results) ----------
+   Genre/region from Rapville docs, Isaac, or public artist profiles. Blank = not confirmed yet. */
+const STAGES = ["Under 10K","10K-100K","100K+"];
+const RESULTS = ["Followers","Monthly listeners","Streams","Views","Money and career"];
+const GENRE_LIST = ["Hip-hop / Rap","R&B","Pop","Rock / Indie","Afrobeats","Funk","Latin","South Asian","Electronic / DJ"];
+const REGION_LIST = ["USA","UK & Ireland","Europe","Asia","India & South Asia","Latin America","Australia"];
+const TAGS = {
+  "demxntia":        {g:["Pop","Rock / Indie"], r:["Asia"], s:"10K-100K", res:["Followers","Monthly listeners","Streams","Views","Money and career"]},
+  "citizen":         {g:["Hip-hop / Rap"], r:["USA"], s:"Under 10K", res:["Followers","Streams","Views","Money and career"]},
+  "khoslaraghu":     {g:["South Asian"], r:["India & South Asia"], s:"100K+", res:["Followers","Monthly listeners","Streams","Views"]},
+  "adri":            {g:["Funk","Hip-hop / Rap"], r:["Europe"], s:"Under 10K", res:["Monthly listeners","Streams","Views","Money and career"]},
+  "rb-singh":        {g:["South Asian"], r:["Europe"], s:"10K-100K", res:["Monthly listeners","Streams","Views"]},
+  "jayo":            {g:["Afrobeats","R&B"], r:["USA"], res:["Monthly listeners","Streams","Views"]},
+  "la-gigi":         {g:["Latin"], r:["Latin America"], res:["Monthly listeners","Views"]},
+  "kamille":         {g:["R&B","Pop"], r:["UK & Ireland"], res:["Monthly listeners","Views"]},
+  "lavez":           {g:["Hip-hop / Rap"], r:["Australia"], res:["Monthly listeners","Streams","Views"]},
+  "arjuna-harjai":   {g:["South Asian"], r:["UK & Ireland"], s:"100K+", res:["Streams","Views"]},
+  "justin-jesso":    {g:["Pop"], r:["USA"], res:["Views"]},
+  "david-lohlein":   {g:["Electronic / DJ"], r:["Europe"], res:["Followers","Views"]},
+  "decarlo":         {g:["R&B"], r:["USA"], res:["Views"]},
+  "desiree":         {g:["R&B"], r:["USA"], res:["Streams","Views"]},
+  "donna-dafi":      {g:["Pop"], r:["Europe"], res:[]},
+  "paul-brady":      {g:["Hip-hop / Rap"], r:["UK & Ireland"], res:["Views"]},
+  "slaw":            {g:[], r:[], res:["Streams"]},
+  "april-kae":       {g:["Rock / Indie"], r:["USA"], res:["Views"]},
+  "sara-dastjani":   {g:["Hip-hop / Rap"], r:["Europe"], res:["Views"]},
+  "bianca-taylor":   {g:["Pop"], r:["USA"], s:"Under 10K", res:["Views"]},
+  "lorenz-simonetti":{g:["Pop"], r:["Europe"], res:["Streams","Views"]},
+  "aiden-laurent":   {g:["Rock / Indie"], r:["Asia"], res:["Views"]},
+  "dj-miah":         {g:["Electronic / DJ"], r:["UK & Ireland"], res:["Views"]},
+  "richie-cypunk":   {g:["Rock / Indie"], r:["Europe"], s:"Under 10K", res:["Streams","Views"]},
+  "laura":           {g:["Electronic / DJ","R&B"], r:["Europe"], s:"Under 10K", res:["Views"]},
+  "petra":           {g:["Pop"], r:[], res:["Views"]},
+  "michael-bibi":    {g:["Electronic / DJ"], r:["UK & Ireland","Europe"], s:"10K-100K", res:["Followers","Streams","Views","Money and career"]},
+  "russ":            {g:["Hip-hop / Rap"], r:["USA","UK & Ireland"], res:[]},
+  "jason-derulo":    {g:["Pop","R&B"], r:["USA"], res:["Views"]},
+  "g-eazy":          {g:["Hip-hop / Rap"], r:["USA"], res:[]},
+  "eric-bellinger":  {g:["R&B"], r:["USA"], s:"100K+", res:["Views","Money and career"]},
+  "arrdee":          {g:["Hip-hop / Rap"], r:["UK & Ireland"], s:"100K+", res:["Views","Money and career"]},
+  "fetty-wap":       {g:["Hip-hop / Rap"], r:["USA"], res:[]},
+  "d-smoke":         {g:["Hip-hop / Rap"], r:["USA"], res:[]}
+};
+CASES.forEach(c=>{const t=TAGS[c.id]||{}; c.genres=t.g||[]; c.regions=t.r||[]; c.stage=t.s||null; c.results=t.res||[];});
+
+const HERO = [
+  {id:"demxntia", n:"24K → 160K", l:"followers in one month", w:"Demxntia"},
+  {id:"khoslaraghu", n:"964K", l:"Spotify monthly listeners", w:"KhoslaRaghu"},
+  {id:"citizen", n:"0 → 1M", l:"followers in 12 months", w:"Citizen"}
+];
+
+/* ---------- STATE ---------- */
+const state = { q:"", small:false, money:false, big:false, genre:new Set(), region:new Set(), stage:new Set(), result:new Set(), open:null };
+const GROUPS = [
+  {key:"genre",  label:"Genre",  get:c=>c.genres},
+  {key:"region", label:"Region", get:c=>c.regions},
+  {key:"stage",  label:"Starting stage", get:c=>c.stage?[c.stage]:[]},
+  {key:"result", label:"Result", get:c=>c.results||[]}
+];
+const ORDER = { genre:GENRE_LIST, region:REGION_LIST, stage:STAGES, result:RESULTS };
+let openGroup = null;
+
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const initials = n=>{const w=n.replace(/\(.*?\)/g,"").trim().split(/[\s-]+/).filter(Boolean);return (w.length>1?w[0][0]+w[1][0]:w[0].slice(0,2)).toUpperCase();};
+const glow = c=>GLOW[c.genres[0]||"_"];
+const isSmall = c=>c.stage===STAGES[0];
+const isMoney = c=>(c.results||[]).includes("Money and career");
+
+function matches(c, skip){
+  if(state.small && !isSmall(c)) return false;
+  if(state.money && !isMoney(c)) return false;
+  if(state.big && !c.big) return false;
+  for(const g of GROUPS){
+    if(g.key===skip) continue;
+    const sel=state[g.key]; if(!sel.size) continue;
+    if(!g.get(c).some(v=>sel.has(v))) return false;
+  }
+  if(state.q){
+    const hay=[c.name,c.aka,c.hook,c.genres.join(" "),c.regions.join(" "),c.regionNote,c.stage,(c.results||[]).join(" "),c.before,c.did,c.result,(c.stats||[]).map(s=>s.v+" "+s.l).join(" ")].join(" ").toLowerCase();
+    if(!state.q.toLowerCase().split(/\s+/).filter(Boolean).every(t=>hay.includes(t))) return false;
+  }
+  return true;
+}
+
+/* ---------- RENDER ---------- */
+function visual(c){
+  const p=PHOTOS[c.id];
+  if(p) return `<img src="${esc(p.src)}" alt="${esc(c.name)}" loading="lazy" style="object-position:${esc(p.pos||"50% 30%")}">`;
+  return `<div class="poster" style="background:radial-gradient(120% 80% at 50% 0%,${glow(c)}55 0%,#000 70%)"><b>${esc(initials(c.name))}</b></div>`;
+}
+function tagList(c, withStage){
+  const t=[];
+  if(c.genres[0]) t.push(c.genres[0]);
+  if(c.regions[0]) t.push(c.regions[0]);
+  if(withStage && c.stage) t.push("Started "+c.stage.toLowerCase());
+  return t.length?`<span class="tags">${t.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</span>`:"";
+}
+function renderHero(){
+  $("#proof").innerHTML = HERO.map(h=>`<button type="button" data-open="${h.id}"><span class="n">${esc(h.n)}</span><span class="l">${esc(h.l)}</span><span class="w">${esc(h.w)}</span></button>`).join("");
+}
+function renderGroups(){
+  const active = GROUPS.reduce((a,g)=>a+state[g.key].size,0) + (state.small?1:0)+(state.money?1:0)+(state.big?1:0) + (state.q?1:0);
+  const shown = CASES.filter(c=>matches(c)).length;
+  $("#groups").innerHTML = GROUPS.map(g=>{
+    const n=state[g.key].size;
+    return `<button class="gbtn" type="button" data-group="${g.key}" aria-expanded="${openGroup===g.key}" aria-controls="panel">${g.label}${n?`<span class="c">${n}</span>`:""}<svg viewBox="0 0 10 10" stroke-width="1.8" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg></button>`;
+  }).join("") + (active?`<button class="clear" type="button" data-clear>Clear all</button>`:"") +
+  `<span class="count"><b>${shown}</b> of ${CASES.length} artists</span>`;
+}
+function renderPanel(){
+  const p=$("#panel");
+  if(!openGroup){p.hidden=true;p.innerHTML="";return;}
+  const g=GROUPS.find(x=>x.key===openGroup);
+  const counts=new Map();
+  CASES.forEach(c=>{ if(!matches(c,g.key)) return; g.get(c).forEach(v=>counts.set(v,(counts.get(v)||0)+1)); });
+  const all=new Set(); CASES.forEach(c=>g.get(c).forEach(v=>all.add(v)));
+  let vals=[...all];
+  vals=ORDER[g.key].filter(v=>all.has(v));
+  const help = {genre:"Pick a sound.",region:"Where the artist is from, or where we shot.",stage:"Followers or monthly listeners when they started with us.",result:"What the case proves."}[g.key];
+  p.innerHTML = `<span class="plabel">${g.label} · ${help}</span>` + vals.map(v=>`<button class="chip" type="button" data-chip="${g.key}" data-val="${esc(v)}" aria-pressed="${state[g.key].has(v)}">${esc(v)}<span class="k">${counts.get(v)||0}</span></button>`).join("");
+  p.hidden=false;
+}
+function cardHTML(c,i,rank){
+  const delay=`animation-delay:${Math.min(i,14)*28}ms`;
+  const rk = rank?`<span class="rank">${rank}</span>`:"";
+  if(c.featured){
+    const fs=c.stats.slice(0,3).map(s=>`<div><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`).join("");
+    return `<button class="card feat anim" type="button" data-open="${c.id}" style="${delay}" aria-label="Open ${esc(c.name)}">
+      <div class="ph">${visual(c)}${rk}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span><p class="hook">${esc(c.hook)}</p><div class="fstats">${fs}</div></div></div>
+    </button>`;
+  }
+  const s=(c.stats&&c.stats.length)?c.stats[0]:null;
+  const stat = s?`<div class="stat"><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`
+               :`<div class="stat"><span class="v soft">${esc(c.calibre||"Watch the videos")}</span><span class="l">Open to watch the work</span></div>`;
+  return `<button class="card anim" type="button" data-open="${c.id}" style="${delay}" aria-label="Open ${esc(c.name)}">
+    <div class="ph">${visual(c)}${rk}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span></div></div>
+    <div class="body">${stat}<p class="hook">${esc(c.hook)}</p></div>
+  </button>`;
+}
+function renderGrid(){
+  const res=CASES.filter(c=>!c.big && matches(c));
+  const big=CASES.filter(c=>c.big && matches(c));
+  const filtering = state.q||state.small||state.money||state.big||GROUPS.some(g=>state[g.key].size);
+  const html=res.map((c,i)=>[c.featured,cardHTML(c,i,filtering?null:"#"+(i+1))]);
+  $("#grid-feat").innerHTML=html.filter(h=>h[0]).map(h=>h[1]).join("");
+  $("#grid").innerHTML=html.filter(h=>!h[0]).map(h=>h[1]).join("");
+  $("#grid-feat").hidden=!html.some(h=>h[0]);
+  $("#grid-big").innerHTML=big.map((c,i)=>cardHTML(c,i,null)).join("");
+  $("#sec-results").hidden=!res.length;
+  $("#sec-big").hidden=!big.length;
+  $("#empty").hidden=(res.length+big.length)>0;
+}
+function renderAll(){ renderGroups(); renderPanel(); renderGrid(); syncQuick(); }
+function syncQuick(){
+  $("#qb-small").setAttribute("aria-pressed",state.small);
+  $("#qb-money").setAttribute("aria-pressed",state.money);
+  $("#qb-big").setAttribute("aria-pressed",state.big);
+}
+
+/* ---------- DRAWER ---------- */
+function platform(u){
+  if(/instagram\.com/.test(u)) return ["ig","IG","Instagram"];
+  if(/tiktok\.com/.test(u)) return ["tt","TT","TikTok"];
+  if(/spotify\.com/.test(u)) return ["sp","SP","Spotify"];
+  if(/facebook\.com/.test(u)) return ["fb","FB","Facebook"];
+  if(/frame\.io/.test(u)) return ["fr","FR","Frame.io"];
+  if(/youtu/.test(u)) return ["yt","YT","YouTube"];
+  return ["","↗","Link"];
+}
+let lastFocus=null;
+function openCase(id, fromHash){
+  const c=CASES.find(x=>x.id===id); if(!c) return;
+  state.open=id;
+  const beats=[["Before",c.before],["What we did",c.did],["Result",c.result]].filter(b=>b[1]);
+  const stats=(c.stats||[]).map((s,i)=>`<div class="sbox${(c.stats.length%2===1&&i===c.stats.length-1)?" wide":""}"><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`).join("");
+  const links=(c.links||[]).map(l=>{const p=platform(l.u);return `<a class="lnk" href="${esc(l.u)}" target="_blank" rel="noopener noreferrer"><span class="pf ${p[0]}">${p[1]}</span><span class="t">${esc(l.l)}<small>${p[2]}</small></span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`;}).join("");
+  const meta=[c.aka?`Also known as ${c.aka}.`:"",c.regionNote?`${c.regionNote}.`:"",c.smallNote?`${c.smallNote}.`:"",c.meta||""].filter(Boolean);
+  $("#d-body").innerHTML = `
+    <div class="dhero">${visual(c)}<div class="cap"><span class="eb">${c.big?"Who we work with":"Case study"}</span><h2 class="dtitle" id="d-title">${esc(c.name)}</h2>${tagList(c,true)}</div></div>
+    <div class="dcontent">
+      <p class="dhook">${esc(c.hook)}</p>
+      ${stats?`<div class="sgrid">${stats}</div>`:(c.calibre?`<div class="sgrid"><div class="sbox wide"><span class="v soft">${esc(c.calibre)}</span><span class="l">The selling point is the quality of the work and the calibre of the artist.</span></div></div>`:"")}
+      ${beats.length?`<div class="story">${beats.map(b=>`<div class="beat"><h3>${b[0]}</h3><p>${esc(b[1])}</p></div>`).join("")}</div>`:""}
+      ${c.note?`<p class="note">${esc(c.note)}</p>`:""}
+      ${links?`<div class="links"><h3>Watch and listen</h3>${links}</div>`:""}
+      ${meta.length?`<div class="meta"><h3>Details</h3>${meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div>`:""}
+    </div>`;
+  const d=$("#drawer"), s=$("#scrim");
+  if(d.hidden){ lastFocus=document.activeElement; }
+  d.hidden=false; s.hidden=false;
+  requestAnimationFrame(()=>{ d.classList.add("on"); s.classList.add("on"); });
+  $("#d-body").scrollTop=0;
+  document.documentElement.style.overflow="hidden";
+  if(!fromHash && location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){ location.hash=id; } }
+  setTimeout(()=>$("#d-close").focus({preventScroll:true}),40);
+}
+function closeCase(){
+  const d=$("#drawer"), s=$("#scrim");
+  if(d.hidden) return;
+  state.open=null;
+  d.classList.remove("on"); s.classList.remove("on");
+  document.documentElement.style.overflow="";
+  const done=()=>{ if(!state.open){ d.hidden=true; s.hidden=true; } };
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) done(); else setTimeout(done,340);
+  if(location.hash){ try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){} }
+  if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+}
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("on"); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("on"),1800); }
+
+/* ---------- EVENTS ---------- */
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-open]"); if(o){ openCase(o.dataset.open); return; }
+  const g=e.target.closest("[data-group]"); if(g){ openGroup = openGroup===g.dataset.group?null:g.dataset.group; renderGroups(); renderPanel(); return; }
+  const ch=e.target.closest("[data-chip]"); if(ch){ const set=state[ch.dataset.chip], v=ch.dataset.val; set.has(v)?set.delete(v):set.add(v); renderAll(); return; }
+  if(e.target.closest("[data-clear]")||e.target.closest("#empty-clear")){ clearAll(); return; }
+});
+function clearAll(){ state.q=""; $("#q").value=""; state.small=state.money=state.big=false; GROUPS.forEach(g=>state[g.key].clear()); renderAll(); }
+$("#qb-small").addEventListener("click",()=>{ state.small=!state.small; renderAll(); });
+$("#qb-money").addEventListener("click",()=>{ state.money=!state.money; renderAll(); });
+$("#qb-big").addEventListener("click",()=>{ state.big=!state.big; renderAll(); });
+let qt; $("#q").addEventListener("input",e=>{ clearTimeout(qt); qt=setTimeout(()=>{ state.q=e.target.value.trim(); renderGroups(); renderPanel(); renderGrid(); },90); });
+$("#scrim").addEventListener("click",closeCase);
+$("#d-close").addEventListener("click",closeCase);
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){ if(state.open) closeCase(); else if(openGroup){ openGroup=null; renderGroups(); renderPanel(); } }
+  if(e.key==="Tab" && state.open){
+    const f=[...$("#drawer").querySelectorAll("a[href],button")]; if(!f.length) return;
+    const first=f[0], last=f[f.length-1];
+    if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+  }
+});
+$("#d-copy").addEventListener("click",()=>{
+  const url=location.href.split("#")[0]+"#"+state.open;
+  const fallback=()=>{ const i=document.createElement("input"); i.value=url; document.body.appendChild(i); i.select(); try{ document.execCommand("copy"); toast("Link copied"); }catch(e){ toast("Copy this link: "+url); } i.remove(); };
+  try{ navigator.clipboard.writeText(url).then(()=>toast("Link copied"),fallback); }catch(e){ fallback(); }
+});
+function fromHash(){ const id=location.hash.slice(1); if(id && CASES.some(c=>c.id===id)) openCase(id,true); else if(state.open) closeCase(); }
+window.addEventListener("hashchange",fromHash);
+
+renderAll(); fromHash();
+</script>
+
+</body>
+</html>
