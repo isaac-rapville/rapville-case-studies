@@ -55,11 +55,14 @@ main > section + section{margin-top:64px}
 .org{display:grid;gap:0;justify-items:center}
 .tier{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;width:100%}
 .stem{width:2px;height:34px;background:var(--line-2)}
-.person{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;gap:14px;align-items:center;min-width:0;width:min(100%,300px)}
+.person{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-width:0;width:min(100%,280px);display:flex;flex-direction:column}
+.person .ph{aspect-ratio:1/1;background:var(--bg-4);position:relative}
+.person .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.person .meta{padding:14px 16px 16px}
 .person.lead{border-color:var(--acc-deep);background:linear-gradient(180deg,rgba(109,40,217,.18),rgba(109,40,217,.04))}
 .av{flex:none;width:56px;height:56px;border-radius:50%;background:var(--bg-4);display:grid;place-items:center;font-family:var(--display);font-size:22px;color:var(--acc);overflow:hidden}
 .av img{width:100%;height:100%;object-fit:cover}
-.person .nm{font-family:var(--display);font-size:24px;line-height:1;text-transform:uppercase}
+.person .nm{font-family:var(--display);font-size:28px;line-height:1;text-transform:uppercase}
 .person .rl{font-size:13px;color:var(--muted);margin-top:4px}
 .depts-wrap{width:100%;position:relative;padding-top:34px}
 .depts-wrap::before{content:"";position:absolute;top:0;left:8%;right:8%;height:2px;background:var(--line-2)}
@@ -74,7 +77,8 @@ main > section + section{margin-top:64px}
 .dept .what{font-size:13.5px;color:var(--muted);margin:8px 0 0}
 .dept ul{list-style:none;margin:0;padding:10px 18px 16px;display:grid;gap:8px}
 .dept li{display:flex;align-items:center;gap:10px;font-size:15px}
-.dept li .ini{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bg-4);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--acc)}
+.dept li .ini{flex:none;width:44px;height:44px;overflow:hidden;border-radius:50%;background:var(--bg-4);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--acc)}
+.dept li .ini img{width:100%;height:100%;object-fit:cover}
 .dept li small{color:var(--faint);font-size:12px;margin-left:auto}
 .dept a.more{margin:auto 18px 16px;font-size:13px;color:var(--acc);text-underline-offset:3px}
 .tbc{color:var(--faint)}
@@ -101,7 +105,13 @@ main > section + section{margin-top:64px}
 .detail .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600}
 .detail h3{font-family:var(--display);font-weight:400;font-size:34px;line-height:1;margin:6px 0 14px;text-transform:uppercase}
 .vlist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.vlist li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.vlist .vav{width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--bg-4);flex:none}
+.vlist .vav img{width:100%;height:100%;object-fit:cover}
+.vlist a.vrow{color:inherit;text-decoration:none;display:contents}
+.vlist li.link{cursor:pointer;transition:border-color .15s}
+.vlist li.link:hover{border-color:var(--acc)}
+.vlist .ig{font-size:12px;color:var(--acc)}
+.vlist li{display:grid;grid-template-columns:32px 44px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .rank{font-family:var(--display);font-size:22px;color:var(--acc);text-align:center}
 .vlist b{display:block;font-weight:600}
 .vlist span{font-size:13px;color:var(--muted)}
@@ -135,12 +145,12 @@ footer .wrap{padding-block:20px}
     <div class="sec-h"><h2 id="org-h">Who runs what</h2><p>Leadership at the top, then every department an artist works with from first call to final post.</p></div>
     <div class="org">
       <div class="tier">
-        <div class="person lead"><div class="av">J</div><div><div class="nm">Junior Makame</div><div class="rl">Founder &amp; CEO</div></div></div>
-        <div class="person lead"><div class="av">N</div><div><div class="nm">Niall</div><div class="rl">Chief Marketing Officer</div></div></div>
+        <div class="person lead"><div class="ph"><img src="images/team/junior.jpg" alt="Junior Makame"></div><div class="meta"><div class="nm">Junior Makame</div><div class="rl">Founder &amp; CEO</div></div></div>
+        <div class="person lead"><div class="ph"><img src="images/team/niall.jpg" alt="Niall"></div><div class="meta"><div class="nm">Niall</div><div class="rl">Chief Marketing Officer</div></div></div>
       </div>
       <div class="stem"></div>
       <div class="tier">
-        <div class="person lead"><div class="av">I</div><div><div class="nm">Isaac Okoro-Maduka</div><div class="rl">VP of Sales</div></div></div>
+        <div class="person lead"><div class="ph"><img src="images/team/isaac.jpg" alt="Isaac Okoro-Maduka"></div><div class="meta"><div class="nm">Isaac Okoro-Maduka</div><div class="rl">Vice President</div></div></div>
       </div>
       <div class="depts-wrap"><div class="depts" id="depts"></div></div>
     </div>
@@ -163,7 +173,7 @@ footer .wrap{padding-block:20px}
 <script>
 /* ---------- Edit team here ---------- */
 const DEPTS = [
-  {k:"Sales", name:"Growth Consultants", what:"First call with the artist. Maps the goal and the plan.", people:["Tyy","Henry"]},
+  {k:"Sales", name:"Growth Consultants", what:"First call with the artist. Maps the goal and the plan.", people:[["Tyy","","images/team/tyy.jpg"],["Henry","","images/team/henry.jpg"]]},
   {k:"Client success", name:"Growth Managers", what:"Day-to-day point of contact for every artist.", people:[["Bibs","Head"],"Anne","Danny","Joe","Thabi"]},
   {k:"Strategy", name:"Viral Content Strategists", what:"Concepts, hooks and the content plan for each phase.", people:["Jack","Mitchell","Nayna","Isabella",["TBC",""]]},
   {k:"Post-production", name:"Editing Team", what:"Turns every shoot into 100 posts per phase.", people:[["Editor 1 TBC",""],["Editor 2 TBC",""],["Editor 3 TBC",""]]},
@@ -173,7 +183,7 @@ const DEPTS = [
 
 /* city: [lon, lat]; v: top 3, real:true = confirmed name */
 const CITIES = [
-  {c:"Los Angeles", r:"USA", ll:[-118.24,34.05], v:[{n:"Scotty Ryan",real:1},{n:"Gary Gray",real:1},{n:"Shooter TBC"}]},
+  {c:"Los Angeles", r:"USA", ll:[-118.24,34.05], v:[{n:"Scotty Ryan",real:1,ig:"https://www.instagram.com/scottyryan_/",img:"images/team/scotty-ryan.jpg"},{n:"Gary Gray",real:1,ig:"https://www.instagram.com/artistgary/",img:"images/team/gary-gray.jpg"},{n:"Shooter TBC"}]},
   {c:"Miami", r:"USA", ll:[-80.19,25.76], v:[{n:"Juwan Chapman",real:1},{n:"Shooter TBC"},{n:"Shooter TBC"}]},
   {c:"Dallas", r:"USA", ll:[-96.8,32.78], v:[{n:"Aiden",real:1},{n:"Shooter TBC"},{n:"Shooter TBC"}]},
   {c:"Atlanta", r:"USA", ll:[-84.39,33.75], v:[{n:"Marcus Hill"},{n:"Dre Simmons"},{n:"Kia Brooks"}]},
@@ -202,8 +212,8 @@ const ini=s=>s.replace(/TBC/,"").trim().split(/\s+/).map(w=>w[0]||"").join("").s
 
 document.getElementById("depts").innerHTML = DEPTS.map(d=>`
   <article class="dept"><header><div class="k">${esc(d.k)}</div><h3>${esc(d.name)}</h3><p class="what">${esc(d.what)}</p></header>
-  <ul>${d.people.map(p=>{const [n,role]=Array.isArray(p)?p:[p,""];const tbc=/TBC/.test(n);
-    return `<li class="${tbc?"tbc":""}"><span class="ini">${tbc?"?":esc(ini(n))}</span>${esc(n)}${role?`<small>${esc(role)}</small>`:""}</li>`}).join("")}</ul>
+  <ul>${d.people.map(p=>{const [n,role,img]=Array.isArray(p)?p:[p,""];const tbc=/TBC/.test(n);
+    return `<li class="${tbc?"tbc":""}"><span class="ini">${img?`<img src="${img}" alt="">`:(tbc?"?":esc(ini(n)))}</span>${esc(n)}${role?`<small>${esc(role)}</small>`:""}</li>`}).join("")}</ul>
   ${d.link?`<a class="more" href="${d.link}">See videographer map</a>`:""}</article>`).join("");
 
 const svg=document.getElementById("map"), NS="http://www.w3.org/2000/svg";
@@ -229,10 +239,11 @@ function show(i){
   cbox.querySelectorAll(".cbtn").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.i===i)));
   pins.appendChild(c.el);
   document.getElementById("detail").innerHTML=`<div class="k">${esc(c.r)}</div><h3>${esc(c.c)}</h3>
-   <ol class="vlist">${c.v.map((v,k)=>`<li><span class="rank">${k+1}</span><div><b>${esc(v.n)}</b><span>Videographer</span></div><span class="tag ${v.real?"real":""}">${v.real?"On roster":"Placeholder"}</span></li>`).join("")}</ol>
+   <ol class="vlist">${c.v.map((v,k)=>{const inner=`<span class="rank">${k+1}</span><span class="vav">${v.img?`<img src="${v.img}" alt="">`:""}</span><div><b>${esc(v.n)}</b><span>Videographer${v.ig?` · <span class="ig">Instagram</span>`:""}</span></div><span class="tag ${v.real?"real":""}">${v.real?"On roster":"Placeholder"}</span>`;
+     return v.ig?`<li class="link"><a class="vrow" href="${v.ig}" target="_blank" rel="noopener">${inner}</a></li>`:`<li>${inner}</li>`}).join("")}</ol>
    <p class="note">Placeholder names are stand-ins until the roster is confirmed.</p>`;
 }
-show(10);
+show(0);
 </script>
 </body>
 </html>
