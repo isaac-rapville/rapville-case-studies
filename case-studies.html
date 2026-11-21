@@ -168,6 +168,19 @@ main > section + section{margin-top:56px}
 .beat p{margin:0;max-width:62ch;color:#E4E4E7}
 .note{font-size:14px;color:var(--muted);border-left:2px solid var(--acc-deep);padding-left:12px;margin:0}
 .links{display:grid;gap:8px}
+.vids{display:grid;gap:14px}
+.vids h3{margin:0 0 2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.yt{display:grid;gap:8px;padding:0;border:0;background:none;text-align:left;cursor:pointer;color:inherit;font:inherit;width:100%;min-width:0}
+.yt.playing{cursor:default}
+.yt-frame{position:relative;display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.yt-frame img,.yt-frame iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+.yt-play{position:absolute;left:50%;top:50%;width:60px;height:42px;transform:translate(-50%,-50%);border-radius:12px;background:rgba(0,0,0,.72);display:grid;place-items:center;transition:background .15s}
+.yt:hover .yt-play,.yt:focus-visible .yt-play{background:#FF0033}
+.yt-play svg{width:22px;height:22px;fill:#fff}
+.yt-t{font-size:14px;font-weight:600;line-height:1.3}
+.yt-t small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+.vbadge{position:absolute;top:12px;right:12px;z-index:2;display:inline-flex;align-items:center;gap:5px;padding:5px 9px 5px 7px;border-radius:999px;background:rgba(10,10,11,.72);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:11px;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.vbadge svg{width:11px;height:11px;fill:#FF0033}
 .links h3,.meta h3{margin:0 0 2px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .lnk{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--bg-3);border:1px solid var(--line);text-decoration:none;transition:border-color .15s,background .15s;min-width:0}
 .lnk:hover{border-color:var(--line-2);background:var(--bg-4)}
@@ -332,6 +345,7 @@ const PHOTOS = {
   "fetty-wap":{src:"images/fetty-wap.jpg", pos:"55% 30%"},
   "d-smoke":{src:"images/d-smoke.jpg", pos:"50% 40%"},
   slaw:{src:"images/slaw.jpg", pos:"45% 40%"},
+  "gary-gray":{src:"images/gary-gray.jpg", pos:"50% 35%"},
 };
 
 /* ---------- DATA (Rapville sources; monthly listeners checked by Isaac on Spotify, Nov 2026) ---------- */
@@ -381,6 +395,15 @@ const CASES = [
   did:"He used the strategy, got 1M views in the first week, then kept repeating what worked.",
   result:"His recent EP is past 1M streams and we have generated millions of streams together in the last year. He is selling beats, doing shows and doing music full time.",
   links:[{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7491375701459848470"},{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7525538606698499350"},{l:"Viral TikTok",u:"https://www.tiktok.com/@adri.7m/photo/7555088865011223830"},{l:"Viral Instagram reel",u:"https://www.instagram.com/reel/DOwS9SkDa_X/?hl=en"},{l:"Spotify",u:"https://open.spotify.com/artist/6y985VEM5UDacD7lG3Zq9C"}] },
+
+{ id:"gary-gray", name:"Gary Gray",
+  hook:"Fell off after an algorithm change. 15M views in 30 days.",
+  results:["Views"],
+  stats:[{v:"15M",l:"views in 30 days"},{v:"10.7M",l:"views on one video"},{v:"20K-50K",l:"views a video before"},{v:"1.4M",l:"followers he had already built"},{v:"2K → 166K",l:"views on his first video once we reposted it"}],
+  before:"A creator who had built 1.4M followers, then fell off after algorithm changes. Out of work, with videos landing 20K to 50K views.",
+  did:"We took the strategy that grew Citizen and tailored it to Gary's brand and his song 'Ocean': a fake-beach 'setup vs the shot' hook that got people arguing in the comments, then a breakup-style storyline that fit the music. When a format won, we ran it again in new locations, and reposted early videos once he had traction.",
+  result:"15M views in 30 days. One video did 10.7M and another 700K, and his first video, which got 2K views at launch, reached 166K when we reposted it.",
+  links:[] },
 
 { id:"rb-singh", name:"RB Singh", aka:"Robin Brar", regionNote:"Punjabi artist based in Oslo, Norway",
   hook:"Stopped paying for ads. Monthly listeners 30K to 130K.",
@@ -605,6 +628,12 @@ const CASES = [
   result:"Within days the first video passed 24M views, and the first month went past 35M. He is back with us now as our longest-standing client.",
   links:[{l:"Watch the 24M reel",u:"https://www.instagram.com/reel/DOHUUlnEiJ7/"},{l:"First video of the new run",u:"https://www.instagram.com/reel/DWo23Uaj6Z5/"}] },
 
+{ id:"hit-boy", name:"Hit-Boy", big:true,
+  hook:"A full shoot day of short-form content for Drake's producer.",
+  results:[], stats:[], calibre:"Quality and calibre",
+  did:"We planned and filmed a full day of short-form content for Reels, TikTok and Shorts. The content is in the edit now. Watch the behind-the-scenes video below.",
+  links:[] },
+
 { id:"arrdee", name:"ArrDee", big:true,
   hook:"We are ArrDee's content team.",
   genre:"Hip-hop / Rap", region:"UK", regionNote:"UK rapper",
@@ -628,6 +657,25 @@ const CASES = [
   links:[{l:"Watch the reels",u:"https://next.frame.io/share/be791bda-951c-4078-b606-f914d599fde2/view/0a42bf08-1e07-4fd5-b862-95288c0c105e"}] }
 ];
 
+
+/* ---------- YOUTUBE CASE STUDY VIDEOS (RAPVILLE channel, @RAPVILLEUK) ---------- */
+const VIDEOS = {
+  "demxntia":      [["How We Used Instagram Trial Reels to Reach 27,000 Streams a Day","oW0IhVydvPw"]],
+  "citizen":       [["We Spent 48 Hours With Citizen The Artist and Scotty Ryan","7DtQaosra8k"],["How He Got 1M Followers In Under a Year: interview with Citizen","uhexhS1XQDc"]],
+  "khoslaraghu":   [["2.5M Streams in 3 Weeks (Full Content Strategy)","UWehsOmbWV4"]],
+  "adri":          [["Getting 1,000,000 Views for an Artist in 7 Days","VMaOHaa14zM"]],
+  "gary-gray":     [["Getting an Unemployed Artist 15,000,000 Views in 30 Days","LviwMK-GUVU"]],
+  "rb-singh":      [["Getting an Artist 100K Streams in 14 Days","7zpipZe0Wy8"]],
+  "arjuna-harjai": [["Getting an Artist 8M Views in First 8 Posts","RrcXl8bcKXg"],["Arjuna Harjai on Filming a Month of Content in 1 Day","fRpVmI6NyGk"]],
+  "decarlo":       [["How I Got DeCarlo 4.2M Views in 5 Posts","nGk2OVbyn9o"]],
+  "desiree":       [["Her First EP Ever and How She Hit 9M Views in 30 Days","po6P7I1gM6U"]],
+  "bianca-taylor": [["How We Took an Unknown Singer from 0 to 16M Views","96-zC5Vt51g"]],
+  "g-eazy":        [["G-Eazy: 24 Hours to Create Viral Content for His New Music","jLWH09AbT_s"]],
+  "eric-bellinger":[["We Filmed 30 Viral Reels in 1 Day With Eric Bellinger","Inal5brfEJA"],["Getting Eric Bellinger 25M Views on the First Post","kzUPJ2vQKbQ"],["Creating Eric Bellinger's Viral Content Strategy in 25 Minutes","k-_qK6svdho"]],
+  "hit-boy":       [["Turning Drake's Producer into a Viral Artist","sV-F3uHEGy4"]],
+  "d-smoke":       [["D Smoke: The Secret to Making Viral Content (Behind the Scenes)","5Y1OAle7Wm4"]]
+};
+
 /* ---------- FILTER TAGS (one source of truth for genre, region, starting stage, results) ----------
    Genre/region from Rapville docs, Isaac, or public artist profiles. Blank = not confirmed yet. */
 const STAGES = ["Under 10K","10K-100K","100K+"];
@@ -639,6 +687,7 @@ const TAGS = {
   "citizen":         {g:["Hip-hop / Rap"], r:["USA"], s:"Under 10K", res:["Followers","Streams","Views","Money and career"]},
   "khoslaraghu":     {g:["South Asian"], r:["India & South Asia"], s:"10K-100K", res:["Followers","Monthly listeners","Streams","Views"]},
   "adri":            {g:["Funk","Hip-hop / Rap"], r:["Europe"], s:"Under 10K", res:["Monthly listeners","Streams","Views","Money and career"]},
+  "gary-gray":       {g:[], r:[], s:"100K+", res:["Views"]},
   "rb-singh":        {g:["South Asian"], r:["India & South Asia","Europe"], s:"10K-100K", res:["Monthly listeners","Streams","Views"]},
   "jayo":            {g:["Afrobeats","R&B"], r:["USA"], res:["Monthly listeners","Streams","Views"]},
   "la-gigi":         {g:["Latin"], r:["Latin America"], res:["Monthly listeners","Views"]},
@@ -666,6 +715,7 @@ const TAGS = {
   "jason-derulo":    {g:["Pop","R&B"], r:["USA"], res:["Views"]},
   "g-eazy":          {g:["Hip-hop / Rap"], r:["USA"], res:[]},
   "eric-bellinger":  {g:["R&B"], r:["USA"], s:"100K+", res:["Views","Money and career"]},
+  "hit-boy":         {g:["Hip-hop / Rap"], r:["USA"], res:[]},
   "arrdee":          {g:["Hip-hop / Rap"], r:["UK & Ireland"], s:"100K+", res:["Views","Money and career"]},
   "fetty-wap":       {g:["Hip-hop / Rap"], r:["USA"], res:[]},
   "d-smoke":         {g:["Hip-hop / Rap"], r:["USA"], res:[]}
@@ -750,20 +800,21 @@ function renderPanel(){
   p.innerHTML = `<span class="plabel">${g.label} · ${help}</span>` + vals.map(v=>`<button class="chip" type="button" data-chip="${g.key}" data-val="${esc(v)}" aria-pressed="${state[g.key].has(v)}">${esc(v)}<span class="k">${counts.get(v)||0}</span></button>`).join("");
   p.hidden=false;
 }
+function vbadge(c){ const n=(VIDEOS[c.id]||[]).length; return n?`<span class="vbadge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${n>1?n+" videos":"Video"}</span>`:""; }
 function cardHTML(c,i,rank){
   const delay=`animation-delay:${Math.min(i,14)*28}ms`;
   const rk = rank?`<span class="rank">${rank}</span>`:"";
   if(c.featured){
     const fs=c.stats.slice(0,3).map(s=>`<div><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`).join("");
     return `<button class="card feat anim" type="button" data-open="${c.id}" style="${delay}" aria-label="Open ${esc(c.name)}">
-      <div class="ph">${visual(c)}${rk}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span><p class="hook">${esc(c.hook)}</p><div class="fstats">${fs}</div></div></div>
+      <div class="ph">${visual(c)}${rk}${vbadge(c)}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span><p class="hook">${esc(c.hook)}</p><div class="fstats">${fs}</div></div></div>
     </button>`;
   }
   const s=(c.stats&&c.stats.length)?c.stats[0]:null;
   const stat = s?`<div class="stat"><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`
                :`<div class="stat"><span class="v soft">${esc(c.calibre||"Watch the videos")}</span><span class="l">Open to watch the work</span></div>`;
   return `<button class="card anim" type="button" data-open="${c.id}" style="${delay}" aria-label="Open ${esc(c.name)}">
-    <div class="ph">${visual(c)}${rk}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span></div></div>
+    <div class="ph">${visual(c)}${rk}${vbadge(c)}<div class="cap">${tagList(c)}<span class="nm">${esc(c.name)}</span></div></div>
     <div class="body">${stat}<p class="hook">${esc(c.hook)}</p></div>
   </button>`;
 }
@@ -804,6 +855,7 @@ function openCase(id, fromHash){
   const beats=[["Before",c.before],["What we did",c.did],["Result",c.result]].filter(b=>b[1]);
   const stats=(c.stats||[]).map((s,i)=>`<div class="sbox${(c.stats.length%2===1&&i===c.stats.length-1)?" wide":""}"><span class="v num">${esc(s.v)}</span><span class="l">${esc(s.l)}</span></div>`).join("");
   const links=(c.links||[]).map(l=>{const p=platform(l.u);return `<a class="lnk" href="${esc(l.u)}" target="_blank" rel="noopener noreferrer"><span class="pf ${p[0]}">${p[1]}</span><span class="t">${esc(l.l)}<small>${p[2]}</small></span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`;}).join("");
+  const vids=(VIDEOS[c.id]||[]).map(v=>`<button class="yt" type="button" data-yt="${esc(v[1])}" aria-label="Play ${esc(v[0])}"><span class="yt-frame"><img src="https://i.ytimg.com/vi/${esc(v[1])}/hqdefault.jpg" alt="" loading="lazy"><span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span><span class="yt-t">${esc(v[0])}<small>YouTube</small></span></button>`).join("");
   const meta=[c.aka?`Also known as ${c.aka}.`:"",c.regionNote?`${c.regionNote}.`:"",c.smallNote?`${c.smallNote}.`:"",c.meta||""].filter(Boolean);
   $("#d-body").innerHTML = `
     <div class="dhero">${visual(c)}<div class="cap"><span class="eb">${c.big?"Who we work with":"Case study"}</span><h2 class="dtitle" id="d-title">${esc(c.name)}</h2>${tagList(c,true)}</div></div>
@@ -812,6 +864,7 @@ function openCase(id, fromHash){
       ${stats?`<div class="sgrid">${stats}</div>`:(c.calibre?`<div class="sgrid"><div class="sbox wide"><span class="v soft">${esc(c.calibre)}</span><span class="l">The selling point is the quality of the work and the calibre of the artist.</span></div></div>`:"")}
       ${beats.length?`<div class="story">${beats.map(b=>`<div class="beat"><h3>${b[0]}</h3><p>${esc(b[1])}</p></div>`).join("")}</div>`:""}
       ${c.note?`<p class="note">${esc(c.note)}</p>`:""}
+      ${vids?`<div class="vids"><h3>Watch the full case study</h3>${vids}</div>`:""}
       ${links?`<div class="links"><h3>Watch and listen</h3>${links}</div>`:""}
       ${meta.length?`<div class="meta"><h3>Details</h3>${meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div>`:""}
     </div>`;
@@ -859,6 +912,12 @@ document.addEventListener("keydown",e=>{
     if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
     else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
   }
+});
+$("#d-body").addEventListener("click",e=>{
+  const b=e.target.closest(".yt"); if(!b||b.classList.contains("playing")) return;
+  const id=b.dataset.yt, f=b.querySelector(".yt-frame");
+  f.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" title="${esc(b.getAttribute("aria-label")||"Video")}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  b.classList.add("playing");
 });
 $("#d-copy").addEventListener("click",()=>{
   const url=location.href.split("#")[0]+"#"+state.open;
