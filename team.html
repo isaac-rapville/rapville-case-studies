@@ -109,6 +109,12 @@ a.person:hover{border-color:var(--acc);transform:translateY(-2px)}
 .mlegend .l1{background:#A78BFA;box-shadow:0 0 0 3px rgba(167,139,250,.25)}
 .mlegend .l2{border:2px solid #A78BFA}
 #map{height:460px;background:#0E0E10}
+.mfull{height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);background:var(--bg);color:var(--text);font:inherit;font-size:14px;cursor:pointer;flex:none}
+.mfull:hover{border-color:var(--acc)}
+.mapbox.fs{position:fixed;inset:0;z-index:5000;border-radius:0;border:0;display:flex;flex-direction:column}
+.mapbox.fs #map{flex:1;height:auto!important}
+.mapbox.fs .mapfoot{max-height:32vh;overflow:auto}
+body.mapfs{overflow:hidden}
 .leaflet-container{font-family:var(--body);background:#0E0E10}
 .leaflet-control-zoom a{background:var(--bg-3)!important;color:var(--text)!important;border-color:var(--line-2)!important}
 .leaflet-control-attribution{background:rgba(10,10,11,.7)!important;color:var(--faint)!important;font-size:10px}
@@ -129,7 +135,7 @@ a.person:hover{border-color:var(--acc);transform:translateY(-2px)}
 .cstats b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1;color:var(--acc)}
 .cstats span{font-size:12.5px;color:var(--muted)}
 .vlist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.vlist .vav{width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--bg-4);flex:none}
+.vlist .vav{width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--bg-4);flex:none;display:grid;place-items:center;color:var(--acc);font-weight:700;font-size:14px}
 .vlist .vav img{width:100%;height:100%;object-fit:cover}
 .vlist a.vrow{color:inherit;text-decoration:none;display:contents}
 .vlist li.link{cursor:pointer;transition:border-color .15s}
@@ -207,6 +213,7 @@ a.crow:hover{border-color:var(--acc)}
           <input id="msearch" type="search" placeholder="Search a city or country" autocomplete="off" aria-label="Search a city or country" aria-controls="msugg">
           <ul class="msugg" id="msugg" role="listbox" hidden></ul>
         </div>
+        <button class="mfull" id="mfull" type="button" aria-pressed="false">Full screen</button>
         <div class="mlegend"><span><i class="l1"></i>Shot here or crew on our books</span><span><i class="l2"></i>We fly our team in</span></div>
       </div>
       <div id="map" role="application" aria-label="Map of Rapville videographer cities"></div>
@@ -237,7 +244,7 @@ const DEPTS = [
   {k:"Client success", name:"Growth Managers", what:"Day-to-day point of contact for every artist.", people:[["Bibs","Head of Success","images/team/bibs.jpg"],["Bibhav","Head of Service Delivery","images/team/bibhav.jpg"],["Tremaine","Growth Manager","images/team/tremaine.jpg"],["Thabi","Growth Manager","images/team/thabi.jpg"],["Danny","Growth Manager","images/team/danny.jpg"]]},
   {k:"Strategy", name:"Viral Content Strategists", what:"Concepts, hooks and the content plan for each phase.", people:[["Nayna Nair","Head of Strategy","images/team/nayna.jpg"],["Pand","Senior Content Strategist & Producer","images/team/pand.jpg"],["Isabella","Viral Content Strategist","images/team/isabella.jpg"],["Jack","Viral Content Strategist","images/team/jack.jpg"],["Mitch","Viral Content Strategist","images/team/mitch.jpg"],["Manansh","Junior Strategist","images/team/manansh.jpg"]]},
   {k:"Post-production", name:"Editing Team", what:"Turns every shoot into 100 posts per phase.", people:[["Daniel Carrero","Head of Editing, Quality & Development","images/team/daniel-carrero.jpg"],["Matias","Editor","images/team/matias.jpg"],["Shinobi","Editor","images/team/shinobi.jpg"],["Angele","Editor","images/team/angele.jpg"],["Tomas","Editor","images/team/tomas.jpg"],["Valeria","Editor","images/team/valeria.jpg"],["Santiago","Editor","images/team/santiago.jpg"]]},
-  {k:"Production", name:"Production Team", what:"Producers and videographers on the ground in every major city.", people:[["Hakim","Head of Production","images/team/hakim.jpg"],["Ananya","Producer",""],["Ouma","Producer","images/team/ouma.jpg","https://www.linkedin.com/in/oumayma-jlassi-55518a161/"],["Akshita","Junior Producer",""],["Casey Eldridge","Producer","images/team/casey-eldridge.jpg","https://www.linkedin.com/in/casey-eldridge-375665229/"]], link:"#production"},
+  {k:"Production", name:"Production Team", what:"Producers and videographers on the ground in every major city.", people:[["Hakim","Head of Production","images/team/hakim.jpg"],["Ouma","Producer","images/team/ouma.jpg","https://www.linkedin.com/in/oumayma-jlassi-55518a161/"],["Casey Eldridge","Producer","images/team/casey-eldridge.jpg","https://www.linkedin.com/in/casey-eldridge-375665229/"]], link:"#production"},
   {k:"Distribution", name:"Social Media Management", what:"Posting and community across TikTok, Instagram, Facebook and YouTube.", people:[["Steve","Social Media Manager","images/team/steve.jpg"],["John","Social Media Manager","images/team/john.jpg"]]}
 ];
 
@@ -287,7 +294,7 @@ const CITIES = [
   {"k": "bsas", "c": "Buenos Aires", "co": "Argentina", "r": "Latin America", "ll": [-34.6, -58.38], "s": 3, "b": 1},
   {"k": "rio", "c": "Rio de Janeiro", "co": "Brazil", "r": "Latin America", "ll": [-22.91, -43.17], "s": 1},
   {"k": "sp", "c": "São Paulo", "co": "Brazil", "r": "Latin America", "ll": [-23.55, -46.63], "b": 1},
-  {"k": "london", "c": "London", "co": "UK", "r": "UK & Ireland", "ll": [51.51, -0.13], "s": 35, "b": 11, "v": [{"n": "Jack"}, {"n": "Mitch Lawley"}]},
+  {"k": "london", "c": "London", "co": "UK", "r": "UK & Ireland", "ll": [51.51, -0.13], "s": 35, "b": 11},
   {"k": "birmingham", "c": "Birmingham", "co": "UK", "r": "UK & Ireland", "ll": [52.49, -1.89], "s": 6},
   {"k": "manchester", "c": "Manchester", "co": "UK", "r": "UK & Ireland", "ll": [53.48, -2.24], "s": 1, "b": 1},
   {"k": "glasgow", "c": "Glasgow", "co": "UK", "r": "UK & Ireland", "ll": [55.86, -4.25]},
@@ -400,12 +407,13 @@ function show(k,fly){
   CITIES.forEach(d=>d.m.setStyle(d.k===k?{color:"#fff",fillColor:"#fff"}:{color:"#A78BFA",fillColor:"#A78BFA"}));
   cbox.querySelectorAll(".cbtn").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.k===k)));
   if(fly) map.flyTo(c.ll,Math.max(map.getZoom(),5),{duration:.8});
-  const v=c.v||[];
+  const v=c.v||[]; let cr=[]; try{cr=CREW.filter(x=>x.k===k&&!v.some(y=>y.n===x.n))}catch(e){}
   const stats=[c.s?`<div><b>${c.s}</b><span>artist shoots done here</span></div>`:"",c.b?`<div><b>${c.b}</b><span>videographers and directors on our books</span></div>`:""].join("");
   document.getElementById("detail").innerHTML=`<div class="k">${esc(c.co)} · ${esc(c.r)}</div><h3>${esc(c.c)}</h3>
    ${stats?`<div class="cstats">${stats}</div>`:""}
    ${v.length?`<ol class="vlist">${v.map(x=>{const inner=`<span class="vav">${x.img?`<img src="${x.img}" alt="">`:""}</span><div><b>${esc(x.n)}</b><span>Videographer${x.ig?` · <span class="ig">Instagram</span>`:""}</span></div><span class="tag">On roster</span>`;
      return x.ig?`<li class="link"><a class="vrow" href="${x.ig}" target="_blank" rel="noopener">${inner}</a></li>`:`<li>${inner}</li>`}).join("")}</ol>`:""}
+   ${cr.length?`<ol class="vlist">${cr.slice(0,6).map(x=>`<li class="link"><a class="vrow" href="${x.ig}" target="_blank" rel="noopener"><span class="vav">${esc(ini(x.n))}</span><div><b>${esc(x.n)}</b><span>${esc(x.r||"Videographer")} · <span class="ig">Instagram</span></span></div></a></li>`).join("")}</ol>${cr.length>6?`<p class="note">${cr.length-6} more in the crew directory below.</p>`:""}`:""}
    <p class="note">${v.length||c.b?"Every shoot has a Rapville-trained videographer and a creative director.":"No crew listed here yet. We fly our team to you, wherever you are."}</p>`;
 }
 /* search */
@@ -453,6 +461,13 @@ cs.addEventListener("input",renderCrew);
 cm.addEventListener("click",()=>{cAll=true;renderCrew()});
 renderCrew();
 window.CREWSET=v=>{cs.value=v;cAll=false;renderCrew()};
+{const pb=document.querySelector(".cbtn[aria-pressed=\"true\"]"); if(pb) show(pb.dataset.k,false); cs.value="";renderCrew();}
+
+/* full screen map */
+const mbox=document.querySelector(".mapbox"),mfb=document.getElementById("mfull");
+function setFs(on){mbox.classList.toggle("fs",on);document.body.classList.toggle("mapfs",on);mfb.textContent=on?"Exit full screen":"Full screen";mfb.setAttribute("aria-pressed",String(on));map.scrollWheelZoom[on?"enable":"disable"]();setTimeout(()=>map.invalidateSize(),60)}
+mfb.addEventListener("click",()=>setFs(!mbox.classList.contains("fs")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mbox.classList.contains("fs"))setFs(false)});
 </script>
 </body>
 </html>
